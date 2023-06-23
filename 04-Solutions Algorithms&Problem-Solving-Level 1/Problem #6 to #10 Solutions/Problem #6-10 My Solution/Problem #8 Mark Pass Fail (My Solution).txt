@@ -1,0 +1,57 @@
+// Course - 04- Solutions - Algorithms&Problem-Solving-Level 1 
+// Problem #6 to #10 Solutions
+// 
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+
+// From Algorthim and Problem Solving 
+// 
+// Problem #8 Mark Pass Fail
+
+/*
+Write a program to ask the user to enter:
+• Mark
+
+Then Print the “PASS” if mark >=50, otherwise print “Fail”
+Example Inputs:
+45
+Outputs:
+Fail
+*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+float ReadMark(float &Mark)
+{ 
+    cout << "Enter Your Mark\n";
+    cin >> Mark;
+
+    return  Mark;
+}
+
+ void CheckIfPassed(float Mark)
+{
+
+    if (Mark >= 50)
+
+        cout << "PASS";
+
+    else
+        cout << "Fail";
+}
+
+
+
+int main()
+{
+    float Mark;
+
+
+   CheckIfPassed(ReadMark(Mark));
+    
+    return 0;
+}
+

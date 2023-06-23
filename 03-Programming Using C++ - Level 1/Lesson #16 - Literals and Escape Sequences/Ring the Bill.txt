@@ -1,0 +1,21 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #16 - Literals and Escape Sequences
+// Ring a Bell
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    
+    cout << "\a";
+
+        return 0;
+}
+
+
+
+
+

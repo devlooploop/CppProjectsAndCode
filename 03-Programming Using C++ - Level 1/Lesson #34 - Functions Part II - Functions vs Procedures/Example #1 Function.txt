@@ -1,0 +1,42 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #34 - Functions Part II - Functions vs Procedures
+
+// Example #1 functions vs procedures
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void myFunction()
+{
+    cout << "This is my first function :-)" << endl;
+}
+
+string myFunction_2()
+{
+    return "This is my #2 function :-)";
+}
+
+float MyFunction3()
+{
+    float x = 10.5;
+    float y = 20.3;
+
+    return x * y;
+}
+
+int main()
+{
+    int Result;
+    
+    myFunction();
+    
+    cout << myFunction_2() << "\n";
+   
+    // we can use function with other functions
+    Result = floor(MyFunction3());
+    cout << Result;
+
+    return 0;
+}

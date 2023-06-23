@@ -1,0 +1,67 @@
+// Course - 04- Solutions - Algorithms&Problem-Solving-Level 1 
+// Problem #1 to #5 Solutions
+// 
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// Instrctor's solution !!!!
+
+// Problem #4 Hire a Driver Case1
+
+/*
+Write a program to ask the user to enter his/her:
+• Age
+• Driver license
+Then Print “Hired” if his\her age is grater than 21 and s/he
+has a driver license, otherwise Print “Rejected”
+*/
+
+#include <iostream>
+using namespace std;
+
+struct stInfo
+{
+    int Age;
+    bool HasDrivingLicense;
+};
+
+stInfo ReadInfo()
+{
+    stInfo Info{};
+
+    cout << "Please Enter Your Age?" << endl;
+    cin >> Info.Age;
+
+    cout << "Do you have driving license \n";
+    cin >> Info.HasDrivingLicense;
+
+    return Info;
+
+}
+
+bool  IsAccepted(stInfo Info)
+{
+    return (Info.Age > 21 && Info.HasDrivingLicense);
+} 
+
+void PrintResult(stInfo Info)
+{
+   
+    if (IsAccepted(Info))
+    {
+        cout << "\nHired";
+    }
+    else
+    {
+        cout << "\n Rejected";
+       
+    }
+
+} 
+
+
+int main()
+{
+    PrintResult(ReadInfo());
+ 
+
+    return 0;
+}

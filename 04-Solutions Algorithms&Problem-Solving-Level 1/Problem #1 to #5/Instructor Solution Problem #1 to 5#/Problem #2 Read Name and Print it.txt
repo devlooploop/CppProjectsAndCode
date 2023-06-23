@@ -1,0 +1,44 @@
+// Course #04- Solutions to Algorithms & Problem-Solving Level 1
+// Use Procedures and Functions in all the solutions
+// 
+// Problem #2 Read Name and Print it
+// Write a program to Read & print Name on screen
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string ReadName()
+{
+	string Name;
+
+	cout << "Enter Your Name \n";
+	getline(cin, Name);
+	return Name;
+}
+
+void PrintName(string Name)
+{
+	cout << "\nYour Name is " << Name <<endl;
+}
+
+int main()
+{
+
+	PrintName(ReadName());
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

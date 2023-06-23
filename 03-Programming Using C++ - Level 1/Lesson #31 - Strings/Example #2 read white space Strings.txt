@@ -1,0 +1,23 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #31 - Strings
+// Example #2 read white space Strings
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string FullName;
+
+    // cin will read the string until the 1st white space
+    // that's why it will read only one name and not the FULL NAME
+    // To solve this problem we use function getline(cin, FullName);
+
+    getline(cin, FullName);
+
+    cout << FullName << endl;
+
+    return 0;
+}

@@ -1,0 +1,155 @@
+04-Solutions- Algorithms&Problem-Solving-Level 1 Notes
+-------------------------------------------------------
+
+// Use Procedures and Functions , struct .... etc in all the solutions
+
+
+Problem #1 Print Name on Screen
+Problem #2 Read  Name and Print it
+Problem #3 Read  Number from user and check  Odd or Even
+Problem #4 Hire a Driver Case1
+
+-------- Problem #3 ----
+
+// PrintNumberType(CheckNumberType(ReadNumber()));
+	takes enum as parameter and checks if Even or Odd
+	
+// In checkNumberType function we gave it user defined data type " enNumberType"
+
+-------------------------- Problem #4 Hire a Driver Case#1 ----
+
+// In this problem we gathered all the related variables in 
+    a struct stInfo() and we read and write from the function stInfo  ReadInfo()
+     
+     stInfo  ReadInfo()
+     {
+        stInfo Info;
+        
+        cout << "Please Enter your Age?" << endl;
+        cin >> Info.Age;
+        // rest of the code
+        
+        return Info;   // Here Info HAS 2 Variables of type struct !!!!
+    }
+    
+
+// Super important "return" returns the result ready !!!! 
+bool  IsAccepted(stInfo Info)
+{
+    return (Info.Age > 21 && Info.HasDrivingLicense);  
+} 
+   
+
+// Here we pass the "IsAccepted(Info)" function to the "if()" will compare and print the result !!!!
+void PrintResult(stInfo Info)
+{
+    if (IsAccepted(Info))
+    {
+        cout << "\nHired";
+    }
+    else
+    {
+        cout << "\n Rejected";
+       
+    }
+
+ -------------------------- Problem #5 Hire a Driver Case#2 ----
+ 
+ // In this function the "if" passed "Info.HasRecommendation" directly there is no need to say 
+	if (Info.HasRecommendation == true) !!!!
+ 
+ bool IsAccepted(stInfo Info)
+{
+    if (Info.HasRecommendation)
+    {
+        true;
+    }
+    else
+    {
+      return (Info.Age > 21 && Info.HasDrivingLicense);
+
+    }
+}
+ 
+ 
+------------------- Problem #6 to #10 Solutions -----------
+ 
+ 
+ // Allways read function structer type in struct type like 
+
+stInfo read(){}
+
+// in "if() ... or if() else" if there is only one line of code there 
+	is no need to put curly brackets {} !!!
+	
+
+// Here to print Reversed Full Name we pass "true" to PrintFullName();
+string GetFullName(stInfo Info, bool Reversed)
+{
+    string FullName = "";
+
+    if (Reversed)
+        FullName = Info.LastName + " " + Info.FirstName;
+    else
+        FullName = Info.FirstName + " " + Info.LastName;
+
+    return FullName;
+}
+
+// Passed true as parameter to get Reversed FullName
+ PrintFullName(GetFullName(ReadInfo(),true));
+	
+
+------------------------------ Problem #7 to #10 Solutions - Half Number -------------
+	 
+// In the result we get 
+Half of 7 is 3.500000   
+
+//the Zero because we used to_string function
+
+void  PrintResults(int Num)
+{
+   
+    string Result = "Half of " + to_string(Num) + " is " + to_string(CalculateHalfNumber(Num));
+    cout << endl << Result << endl;
+}
+
+----------------- Problem #8 to #10 Solutions ----
+
+// We used enum as data type for easier and more optimized code 
+
+enum enPassFail { Pass = 1, Fail = 2 };
+
+----------------- Problem #9 to #10 Solutions -------------
+
+// Remember reusability of the function like ezample below:
+
+
+float CalculateAverage(int Mark1, int Mark2, int Mark3)
+{
+
+    return (float)SumOf3Marks(Mark1, Mark2, Mark3) / 3;  //reusability used here
+}
+
+----------------- Problem #10 to #10 Solutions -------------
+
+Problem #10 - Average of 3 Marks  Done !!!
+
+------------- Problem #11 to #15 Solutions ---------------
+
+// Problem #11 Average Pass Fail
+
+// The only new thing in this problem is the function bellow:
+
+enPassFail CheckAverage(float Average)
+{
+    if(Average >= 50)
+        return enPassFail::Pass;
+    else
+        return enPassFail::Fail;
+}
+
+------------- Problem #12 to #15 Solutions ---------------
+
+// Problem #12 Max of two Numbers
+

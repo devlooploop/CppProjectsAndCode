@@ -1,0 +1,48 @@
+// Introduction to Programming Using C++ - Level 1
+
+// From Algorthim and Problem Solving 
+// Lesson #21 - Increment Decrement Operators: ++, --
+// example #1 from the video
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A = 10, B = 20;
+
+    ++A;
+    --B;
+
+    cout << "A = " << A << endl;
+    cout << "B = " << B << endl;
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

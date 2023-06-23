@@ -1,0 +1,24 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #16 - Literals and Escape Sequences
+// Name with spaces & Tabs
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    
+    cout << "Ali\t Fadi \t Madi\n";
+    cout << "Khalid\t Shadi \t Zagoli\n";
+    
+
+
+        return 0;
+}
+
+
+
+
+

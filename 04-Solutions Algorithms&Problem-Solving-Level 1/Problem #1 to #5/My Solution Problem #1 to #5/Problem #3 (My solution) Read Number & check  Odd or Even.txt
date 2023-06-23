@@ -1,0 +1,42 @@
+// Course - 04-Solutions- Algorithms&Problem-Solving-Level 1 
+// Problem #1 to #5 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// 
+// Problem #3 Read Number from user and check if Odd or Even
+
+// My Solution Version
+#include <iostream>
+using namespace std;
+
+int ReadNumber()
+{
+	int Num;
+	cout << "Please Enter a number\n";
+	cin >> Num;
+	return Num;
+}
+
+void CheckEvenOrOdd()
+{
+	if (ReadNumber() % 2 == 0)
+	{
+		cout << "It's Even\n";
+	}
+	else
+	{
+		cout << "It's Odd\n";
+	}
+}
+
+void PrintNumber()
+{
+	 CheckEvenOrOdd();
+}
+
+int main()
+{
+	PrintNumber();
+
+	return 0;
+}

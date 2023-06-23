@@ -1,0 +1,27 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #12 - Output (Print) 
+// ID-Card ... V1
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    cout << "***********************\n";
+
+    cout << "Name: Alix \n";
+    cout << "Age: 22\n";
+    cout << "City: Aman\n";
+    cout << "Country: Espania\n";
+
+    cout << "***********************\n";
+
+        return 0;
+}
+
+
+
+
+

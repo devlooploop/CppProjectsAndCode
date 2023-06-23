@@ -1,0 +1,1058 @@
+
+------------------------- Algorthim & Problem Solving Lvl 1 ------------------------
+
+الدرس السادس عشر - اولويات الحساب
+Order of Operations:-
+
+// Original repo/project file location
+C:\Users\wakanda\source\repos\test
+
+**From Left to Right
+BODMAS 
+Bracket(), Order √ x^2,  [Divide / or  Multiply *],  [Add+ or subtract -]
+
+PEMDAS
+Parentheses(), Exponents √ x^2,  Multiply * or Divide /,  Add or subtract
+
+
+-------------------------------------------------------------------------------------------
+-------------------- 03 - Programming Using C++ - Level 1  ---------------------------------
+
+Lesson #16 - Literals and Escape Sequences
+-------------------------------------------
+
+\\ Backslash
+\t Tab
+\n Newline
+\" Double quote
+\' Single quote
+\a Audio bell
+
+// to print single quote ':
+char myLetter = '\'';
+
+
+-------------- Lesson #17 - Variables --------------------
+
+Data types:-
+
+1- Fundamentals 								 2-	Derived				3- User-Defined
+---------------								   --------------		   ------------------
+												2.A Function			3.1 Class
+1.1- Integral Type:														
+(1-int: whole Number:712, 						2.B Array				3.2 Structure	
+1.2- char: 										
+Single character:'A')							2.C Pointer				3.3 Union
+char has ASCII int value thats
+why its considered int 							2.D Reference			3.4 Enum
+													
+1.3- Floating Type:														3.5 Type Def		
+float: stores in it A-Floating Point:14.5 
+1.4- double: floating point: 14.50
+
+1.5 Boolean Type:
+bool: true or false
+
+1.6 String Type:
+string: Txt: "Hello"
+
+1.7 Void Type:
+void : Empty
+
+1.8 Wide Character:
+wchar_t: Unicode
+To store other charlike 
+Arabic and other char
+
+
+Declearing(Creating) Variables
+----------------
+Syntax:
+type VariableName = value;
+
+
+int    Age    =       45  -->  Literal
+ |		|			   |
+ v		v			   v 
+Type  identifires	   value / literal constant
+
+
+// const int MinutesPerHour = 60; 
+// Constant value is read only which means its value can't be changed
+
+
+--------------------------- Lesson #18 - User Inputs  -------------
+Input Syntax:
+
+				source     Verb       Object	     	    Terminator
+				std::cin     >>      Variable    				;
+				    |		  |			|						|
+				 Monitor	 Read 	Variable to store input		end
+				 
+				 
+--------- Lesson #19 - Datatypes Sizes & Ranges -----------------------
+
+Data Type Ranges & Sizes:- 
+
+// Data Type size(bytes) it's differnt from operating system to another 
+
+Type		Meaning		          		Range				    		   Size(Bytes)
+-------	   --------		      --------------------------				  -------------		
+1- int		Integer             -2,147,483,648  to +2,147,483,647			     4
+								
+2- float 	Floating-Point      1.17549e-38     to  3.40282e+38   			     4 
+
+3- double   Double Floating-Point  2.22507e-308 to 1.79769e+308                  8
+
+4- char	    Character				-128        to  127 						 1
+
+5- wchar_t  Wide Character			---				---							 2
+
+6- bool     Boolean    				0 				1 							 1 
+7- void     Empty					---				---							 0
+8- string   String 					---				---							 12 
+
+Type Modifires: ( can be used only with int, double, char)
+-------------
+1- signed
+2- unsigned  // Removes the sign(-+) from the last byte and use it as a number instead! 
+				so the number doubles, every bit on the left it doubles because it's Binary.		
+3- short
+4- long
+
+// when using unsigned starts from 0 with no negative numbers allowed, it will double the numbers that
+	the int vriable stores like unsigned int stores 0 to 4,294,967,295 the 
+	the int variable size remain the same 4 bytes. 
+	
+// short int or only short is the same !!!
+
+
+Type		   signed/unsign		 	Range				    		       Size(Bytes)
+-------	    	----------	        ---------------------------		       --------	
+1- short int	signed            -32,768 to +32,767			            2
+   or short	    unsigned	          0    to 65,536                        2
+	
+2- int	      	signed				-2,147,483,648 to +2,147,483,647        4 
+                unsigned              0 to   4,294,967,295 				    4
+
+3- long int     signed	        -2.147,483,648 to +2.147,483,647            4
+   or long      unsigned                 0      to   4,294,967,295 		    4 
+   
+4- long long int  signed         -(2^63)  to  (2^63)-1					    8 
+  or long long    unsigned          0     to   18,446,744,073,709,551,615   8
+  
+
+// we don't use unsigned float because int will take care of the last byte,
+	but float the represenation is diffrent in the computer so there is no "unsigned float or double".
+	
+Type		   Sign		          		Range				    		   Size(Bytes)
+-------	      --------		      --------------------------				  -------------		
+								
+1- float 	    signed            1.17549e-38  to 3.40282e+38   			         4 
+2- double       signed            2.22507e-308 to 1.79769e+308                       8
+3- long double  signed            10 e-307     to 10 e+308    						 12
+
+
+// Note: The size of the (Data type)it depends on the compiler and the machine architect\n"
+        "Here the size of Long double is 8 bytes on other machine and compiler versions it may show (16 bytes.
+
+Type		  Sign / unsigned		          		Range				    		   Size(Bytes)
+-------	      ---------------		      --------------------------			   -------------
+1- char          signed                        -127  to 127								1
+				 unsigned						0    to 255								1	
+2- bool				-						       -									1
+3- string 			-							   -        							12 
+4- void 			-							   Empty  								0 bytes
+
+// by default everything is signed
+// int v1 == signed int v2
+
+// unsigned int v3  ( the size will be same 4 bytes, but the variable can store double 
+						original size with unsigned as THE NEGATIVE SIGNED WILL TAKE ONE PLACE/Bit
+					   with unsigned will use that bit for doubling the capacity of the variable).
+					   
+// short int v4 == (same as) short v5;
+
+// unsigned short int v6 == (same as) unsigned short v7;
+
+// signed long int v8 == (same as) long int v9 == long v10;
+
+// unsigned long v11;
+
+//  long long int v12;
+
+// unsigned  long long v13;
+
+// long double v14;
+
+// signed char v15 == char v16;
+
+//unsigned char v17;
+
+//******** Avoid using wrong data type sizes to avoid overflow problems *****
+
+// double distance = 65E12; // 65E12 equals to 56*10^12
+// short d = 3434233; // Error! out of range
+
+// unsigned int a = -10; // Error! can only store positive number
+                          // Some compilers gives error, others substitute with some numbers!
+						  
+// use function sizeof(data type) to know the size of any data type.
+
+// use CHAR_MIN CHAR_MAX to know the data type Ranges.
+
+
+------------------- Lesson #20 - Arithmetic Operators  -----------------------
+ A = 10, B = 20
+	
+ operator		 Example
+-----------		-------------
+    /				B / A = 2 		
+	% (Modulo)      B % A = 0 
+
+
+// int A / B = 0  it truncates the result to Zero  
+
+*** Because A not dvisable by B that's why it returns same value of A 	
+// A % B = 10 
+
+Home Work
+-------------
+#H.W from the Video Arithmetic Operators
+
+******And then solve the following Problems from ( Algorthim and Problem Solving):-
+#7 #9 #10 #14 
+#15 #17 #19 #20 #21 #22 #31 
+#35 #39 #40 #42 #43 #47 #48 
+
+------------ Lesson #21 - Increment Decrement Operators: ++, --------
+
+A++ ----> A = A +1
+++A ----> A = A +1 
+
+B-- ----> B = B +1
+--B ----> B = B +1
+
+------------ Lesson #22 - Postfix vs Prefix : ++A vs A++ , --A vs A--  --------
+
+A = 10
+
+Prefix	VS  Postfix
+------		--------
+++A    		 A++
+--A          A--	
+
+A++ postfix: C = A++ 
+// Here C will take value 10 then A will be increased by 1 and become 11 
+
+++A prefix: C = ++A 
+// A will increase by 1 and become 11, then C will take 11
+
+A-- postfix: C = A--
+// Here C will take value 10 then A will be decreased by 1 and become 9 
+
+--A prefix: C = --A 
+// A will decrease by 1 and become 9, then C will take 9
+
+------------------- Session #23 - Assignment Operators ------------------
+
+A =10, B = 20
+
+Operator     Example	      Equivalent to	
+--------	---------- 	     --------------- 		
+ +=    		  A += B       		A = A + B
+ -=    		  A -= B			A = A - B
+ *=    		  A *= B			A = A * B
+ /=    		  A /= B			A = A / B
+ %=    		  A %= B  			A = A % B
+ 
+ 
+------------------- Lesson #24 - Relational Operators  ---------------------
+
+	A = 10 , B = 20
+	
+Operators					Description										Example
+---------- 		-----------------------------------------------      ----------------------
+			
+       ==  		Checks if the value of two operands are 				(A == B) is not true	
+				equal or not, if Yes then condition becomes true.
+	
+	   !=      Checks if the value of two operands are					(A != B) is true
+				equal or not, if values are not equal then 
+				condition becomes true.
+				
+	            Checks if the value of left operand is 				    (A > B) is not true	
+	 	>	    greater than the value of right operand,
+				if Yes then condition becomes true.
+				
+				Checks if the value of left operand is 				    (A < B) is true	
+	 	<	    less than the value of right operand,
+				if Yes then condition becomes true.	
+
+				Checks if the value of left operand is 				    (A >= B) is not true	
+	   >=	    greater than or equal to the value of right operand,
+				if Yes then condition becomes true.	
+
+				Checks if the value of left operand is 				    (A <= B) is true	
+	   <=	    less than or equal to the value of right operand,
+				if Yes then condition becomes true.	
+				
+------------------- Lesson #25 - Logical Operators ------------------------
+
+A =1 (True), B =0 (False)
+
+Operators					Description										Example
+---------- 		--------------------------------------------------         --------------------
+  &&			 Called logical AND operator. If both operands are			(A && B)  is false.
+					non Zero, then condition becomes true.
+  
+  ||			 Called logical OR operator. If any of the two operands		(A || B)  is true.
+					is non Zero, then condition becomes true.
+
+   !			 Called Logical NOT Operator. Used to reverse the Logical   !(A && B) is true.
+				    state of it's operand. If the condition is true then 
+					Logical NOT operator will make it false. 
+  
+
+------------------- Lesson #26 - Math Functions in C++ ---------------------
+
+// *** We treat function just lik variable  !!! 
+
+
+round(2.4), round it down to 2
+round(2.5), round it up to 3 
+
+// We can use function inside function :
+round(sqrt(x));
+
+// We can use round() like so in expressions:
+round(2.4) + round(5.6); // gives 8
+round(2.4) / 2; // gives 1
+
+// ceil(2.9);  // gives 3
+// floor(2.9); // gives 2
+
+// ceil(-2.9);  // gives -2
+// floor(-2.9); // gives -3 
+ 
+
+
+// Only as referance:-
+https://en.cppreference.com/w/cpp/header/cmath
+
+// Most used Functions in cmath library
+---------------
+round()
+sqrt()
+pow()
+ceil()  
+floor()
+abs()
+
+Home Work
+----------
+#
+ "16", "18", "19", "20", "21", "22", "23", "31", "32", "42", "43"
+
+Notes regarding home work :-
+---------------------------
+
+#16:          use pow inside sqrt()
+#18:,#19,#20: after finding the result use ceil() and print the final result.
+#21,#22:      after finding the result use floor() and print the final result
+#23, #31, #32, #42, #43:
+after finding the result use round and print the final results
+
+---------------- Lesson #27 - Structures ----------------
+
+Syntax:
+struct StructName {};
+
+User-Defined Data types:-
+------------
+2- structure:
+Are way to group several related variables into one place.
+
+
+// struct is like record it contain info about person,, thing .. etc
+
+---------------- Lesson 28 - Enums ----------------------
+
+Syntax:
+enum EnumName {};
+
+User-Defined Data types:-
+------------
+4- Enum 
+// When naming Enums it's good practice to use en_ prefix like so with enum Color{}; :-
+		en_Color {Red, Green, Blue}; 
+		it'll assign numbers for the memeber variables of enum like 
+		Red = 0, Green = 1, Blue = 2;
+		
+// You can also change value of the ariabes like :
+		Red = 100, Blue = 300 ... etc
+		
+---------------- Lesson #29 - Nested Structures and Enums - Full Practical Example ----
+
+// Structures has properties like Name, Age ..etc:
+	struct Mystruct { string Name, int Age};
+// in structures We can't put functions in it, but in OOP we can ike class ****
+
+
+---------------- Lesson #30 - Data Type Conversion (casting) ------
+		
+		
+		  Higher Data Type		
+	 	  ----------------	
+     ^		Long Double 	|
+N	 |			|           |  D
+O	 |			|           |  A
+	 |          v           |  T
+D	 |        Double        |  A
+A	 |          |           |
+T	 |          |           |  L
+A	 |          v           |  O
+	 |		  Float         |  S
+L	 |          |           |  S
+O	 |          |           |
+S	 |   		v           |
+S	 |        Long          |
+	 |			|		    |
+	 |			|           |
+	 |			v           |
+	 |         Int          |
+ 	 |          |           |
+	 |			|	        |
+	 |	        v           |
+	 |  	  Short         |
+	 |  		|           |
+	 |  		|           |
+		  		v			v
+		  	   Char
+			----------   
+		 Lower Data Type   
+		 
+		 
+Data Type Conversion Functions:
+------------------------------
+// convert string to integer 
+int num_int = stoi(str);
+
+// convert string to float
+float num_float = stof(str);
+
+// convert string to double
+double num_double = stod(str);
+
+// To convert any data type to string
+// When convert double or float to string this results in 
+    zeros at the end of the converted variable value as in 
+//  float to string   N3 = 55.23 is 55.230000 
+
+string st1; int Num1 = 20;
+st1 = to_string(Num1);
+
+   
+- Convert double to int :-
+
+int Num1;
+double Num2 = 18.99;
+
+Num1 = Num2; // Implicit(automatic) conversion from double to int, diffrent from compile to another
+
+Num1 = (int) Num2; // Explicit Conversion (C style)
+
+Num1 =  int (Num2); // Explicit Conversion // conversion via int function takes parameter (Num2)
+
+cout << Num1 << endl; // ouputs 18 
+
+-------
+Exmp 2
+#include <string> // Contain string conversion functions 
+string str = "123.456";
+
+// convert string to integer 
+int num_int = stoi(str);
+
+// convert string to float
+float num_float = stof(str);
+
+// convert string to double
+double num_double = stod(str);
+
+**************************** Convert to String 
+// ** to_string(parameter) converts from int or any data type to string 
+// The output would be some number followed by zeros because it converted to string
+
+example:- *** to_string  ***
+
+int Num1 = 123;
+double Num2 = 18.99;
+
+string St1, St2;
+St1 = to_string(Num1);
+St2 = to_string(Num2);
+
+cout << St1 << endl;
+cout << St2 << endl;
+
+----------------------------- Lesson #31-Strings -----------------------------------
+
+String:
+A string variable contains a <collection of character> surrounded by double qoutes.
+
+String is Array of Character
+
+// if you convert string to int and pass St = "AB" to stoi(St) like stoi(St)
+	this will results in error the passed value shoud not be words or character
+	it should be numbers string like "12345"
+	
+// use + to concatenate two strings
+
+length() // prints the length of the string
+
+string MyString = "ABCDEZ";
+MyString[2];   // prints position nr 3 or C, prints index
+
+getline(cin, FullName)  // gets first name and last name
+
+------------------------------- Lesson #32 - Functions Part 1 -------------------------------
+
+2-Function: Derived Data type
+
+Function a block of code which only runs when it is called.
+
+you can pass data, know as parameters, into a function.
+
+Re-usability:
+Functions are used to perform certain actions, and they are important for reusing code:
+		  Define the code once, and use it many times.
+		  
+Function that doesn't returns a value it called procedure!!!!!
+
+// *** Functions is type of dervied data type
+
+void myFunction() {  
+
+// Any function has no return it's called Procedure ****
+}
+
+int main() { 
+	myFunction();  //**** To call func, just wright the function's name 
+	
+	return 0;
+	}
+-------------------Lesson #33 - Solving the getline() Problem---------------------------
+// ***To solve getline() problem we use ignore();
+
+// When there is escape sequence like "\n" before getline(cin,variable) and the enter pressed
+	it will take the ENTER pressed as input and will cause problems to avoid this use .ignore.
+cin.ignore(1, '\n');
+--------------------------------Lesson #34 - Functions Part II - Functions vs Procedures----
+
+// Functions returns same data type as function defiend
+
+// ** Functions has return in it Procedures don'takes
+
+float MyFunc(){
+
+	float x, float y;
+	return x * y;
+	}
+------------Lesson #34 - Functions Part II - Functions vs Procedures-------------------
+
+// Functions treated as variabls it can be used with operations as shown here
+   cout << mySumFunction() +10 /20;  
+   
+// In function normally it doesn't contain "cout <<" in it, it just return a value!
+// But in procedure it does!
+
+// void MyFunction();  In procedure void is used as data type as it is empty !!!
+
+// We can do arethmatic ops on functions like :
+int result = MyFunc(x)/2;
+
+// we can use function with other functions
+    floor(MyFunction3());
+   
+--------------------------- Lesson #35 - Function Part 3 - Parameters ----------
+
+// Procedure:
+------------
+// We can put Read & Print/write statement in procedures since it has void data type.
+
+Function:
+--------
+// We shouldn't put any read and print statements in it because it
+	has a parameter and it return a value after it do arthmatic operation or any 
+	other process on it, the function is like a process!
+	
+// Also it's not practical to put like "cout <<" in a function!!!
+
+Example on this:-
+// We Do like :-
+
+// There is no need for "cout" as it'll return a value!
+	we can put as much lines of code as we want. 
+		The function is like in "math library", like round(), sqrt() ... etc. 
+
+// Here the function waits for two parameters from the user 
+int MySumFunction(int Num1, int Num2)
+{
+	return Num1 + Num2;
+}
+
+int MySumFunction()
+{
+	int Num1, int Num2;
+	
+	cout << "Please Enter Number1" <<endl;
+	cin >> Num1;
+	
+	cout << "Please Enter Number2" <<endl;
+	cin >> Num2;
+	
+	return Num1 + Num2;
+}
+
+// In a "Function" If we want to read a variable value from a user we define "cin in main() function"
+	and not inside the function!!!!
+
+Home Work:
+// Solve all with Function if it need functions and procedure if its need procedure !!!!
+#1, #2, #14, #15, #16, #18, #19, #20, #21, #22, #23, #31, #32, #42, #43
+
+
+------------ Lesson #36 - Variable Scope/ Local vs Global  Variables -------------
+
+// Three Super important to remember about variable:
+1- It's Name
+2- It's Value
+3- It's Reference wich will be in Hexa (The memory Adress of the variable)
+
+// Global variable is defiend outside main() after "#include" <>.
+
+// *** to access global variable x use ::x
+
+Local variable finishs its life cycle (die) when function is done!!!!
+
+// ::x means go outside main() and bring the global value(::x)
+
+To modify the global variable x, ::x++ that add increase ::x by 1 
+
+or to modify ::x value to 700, ::x = 700;
+
+
+---------------- Lesson #37 - Function Parameters - By-Val vs By-Ref -------
+
+// The ampersand symbol "&" it's called also "referance" it brings the adress of the variable
+
+// void MyFunction(int &Num1){} // Here it's the adress of the variable returned and not the parameter it self, it means its not a copy(of the parameter/variable), it's the adress's value been minupilated!!
+
+// in another word when & referance used we modify the variable directly.
+
+
+---------------- Lesson #38 - Structures and Functions - Re-usability -----
+
+// Super useful to reuse Functions & struct ... etc 
+	we wright it save us alot alot .... alot of time like 
+
+// We can call them and reuse them as many times as we want!
+void MyFunction(){}
+
+struct stPersonInfo {};
+
+//** parameter in Function must be passed by refernce otherwise will the parameter 
+	  gets back empty outside the function (inside main())!
+	  
+// Example : void ReadInfo(strInfo &Info) {...}
+
+
+****** cin >> PersonID.isMarried;  // Not sure how to use cin with enum ????????
+
+
+---------------- Lesson #39 - Arrays ----------------
+
+2- Derived Data Type:
+--------------------
+
+2- Array:
+	An array is a "variable" that can "store multiple values" of the "same type".
+
+// Example: "string" is an array that stores multiple characters.
+
+// In "array" we store, update and search for info 
+
+// String is an array of characters
+
+
+// Array represenation:
+ int x[5] = {22, 18, 2, 55, 520};
+ 
+ 
+ Array
+ Members ---> x[0]  x[1]   x[2]  x[3]  x[4]                     ------
+																     |
+			    22	  18     2     55   520  <--- Array's Values     |
+Index starts                                                         |	Memory
+from zero --->   0     1     2      3    4   <--- Array's Index      |
+																     |
+			   1000   1004  1008  1012  1016 <--- Memory address ----- 
+			   
+
+
+------------ Lesson #40 - Arrays with Functions -------------
+
+/// In visual Studio when search for a function use *** right click on the function 
+/// you search for then click of " Go to definition " F12
+
+*** Array can't be defined by referance unlike struct / structer
+*** Array send as parameter by referance as defult  
+
+void ReadArrayData(int &x[3]);			// This is illegal 
+
+in main() when you send the array as function parameter you send only Array's name x
+ReadArrayData(x);  *******
+
+---------------Lesson #41 - Arrays of Structure ------------
+
+In this home work we used procedure calling another procedure
+
+ReadInfo(stInfoPerson &info){...};
+
+void ReadInfoArray(stInfoPerson PersonArray[2]) {
+
+	// ReadInfo procedure called inside ReadInfoArray procedure
+	ReadInfo(PersonArray[0]); 
+	ReadInfo(PersonArray[1]);
+
+}
+
+----------- Lesson #42 - Conditional Statements: IF, IF ... Else Statement ----
+Syntax:
+--------
+
+if ( condition == True)
+{
+	// body of code to be excuted if true
+}
+
+// 	Rest of the program code ....
+
+*** Solve the following problems of " Algorthim and Problem Solving " :-
+
+#4 ,#8 ,#11 ,#24 ,#49
+
+Notes:
+#49: 
+
+	don't use loop, only print wrong password and end the program.
+		After you solve all the problems, resolve them using functions & Procedures.
+
+----------- Lesson #43 - Conditional Else IF Statement ----------
+
+Syntax: Else IF Statement
+------------------------
+if ( condition #1)
+{
+	// condition #1 is true
+}
+else if ( condition #2)
+{
+	// condition #1 is false and condition #2 is true
+}
+else 
+{
+	// condition #1 is false and condition #2 is false
+}
+
+Home Worke:
+----------
+#33, #34, #36, #44, #45
+
+
+----------- Lesson #44 - Enums with IF Statements --------
+
+// To use Enum with cin >> 
+	we cast data type from to Enum as bellow:-
+
+Using cin >> with enum{...} :-
+cin >> c;
+    Color = (enScreenColor) c;
+	
+// To put the Color on screen we use
+	system("color 4F");
+
+
+--------------------- Lesson #45 - Switch .. Case Statement ---------
+
+Syntax:
+---------
+
+switch (expression)
+{
+	case x:
+		// code block
+	break;
+	
+	case y:
+		// code block
+	break;
+	
+	default:
+		// code block
+}
+
+// Not all "if statements" can be replaced with switch()- case statement ****
+
+// if case x is true then the code block excuted and then hits the
+	 first break in case x then will not excute other cases !!!!
+	 
+// "deafault" excuted only when all the case statements not true !!!!!
+
+// Don't forget " braek; " after each case :, every case has braek !!!
+	if you forget then all the case will exc regardless if it's true or false 
+
+// Not all the compilers in c++ support range like " age btween 18 and 45 " as an example
+// So dont use Switch-Case with ranged variables / problems ! 
+// ei ( age >= 18 && age <= 45 )
+
+Home Work
+------------
+#36, #44, #45
+
+--------------- Lesson #46 - Nested Functions with Enums ----------
+
+// When we use Enum nested with function 
+	we cast the data type to Enums 
+
+Example 44Chose Country-2.txt 
+#45 Month Of Year, 
+Example 44-ChoseColor-1.txt,  
+Lesson#46 Week Days
+
+-------------- Lesson #47 - For Loops  ----------------
+
+For Loops:
+----------		 Initialization Expression
+						|  
+						|  
+						|  
+					    V
+					  Test         False
+			------> Condition -----------|
+			|			|                |
+			|			|                |
+			|			| True           |
+			|			V                |
+			|	 Execute Loop Body       |
+			|							 |
+			|	        |		         |
+			|			|                |
+			|			|                |
+			|			V                |
+			|----Update Expression       |
+										 |  Exit Loop
+										 V	
+					
+				
+
+for (initialization; condition; update)
+{ 
+	// body of loop
+}
+
+// To make for loop reverse / countdown reverse verey thing
+// initial value, condition and update 
+
+for (int i = 5; i>= 1; i--)
+{
+	cout << i << endl;  
+}
+// i++ can be i = i + 2 (step 2 increase by 2) or any operation
+
+H.W
+-------
+ #26, #27, #28, #29, #30, #32, #46  
+
+Notes: 
+#30 factorial: don't validate positive numbers:
+Don't use 2 loops to check if entered number is positive only one loop!
+
+#46 Use char(i) function:
+To print Upper case A in ascci begin the loop from 65 which is the ASCCI value of A ends with 90 Z, then make another loop (not nested) for the lower case letters (97-122).
+
+After you solve all the problems with "for loops", resolve them using functions & procedures.
+
+
+------------ Lesson #48 - For Loop & Arrays --------------
+
+// In for loop for array both works same with the  Length of elements:
+ for (int i = 0; i < Length  ; i++);
+ for (int i = 0; i <= Length-1  ; i++)  
+ 
+ // when print use ---> i+1
+ cout << i+1;
+ 
+ // Length-1 because the array starts from Zero 
+
+Home Work
+----------- 
+Home Work from Lesson #41 
+
+// just modify on Read and Print info functions!
+// Define the array with index max 100 like so Arr[100]
+
+// in ReadInfo() if the user enters 5 persons or more put the persons inside 
+a **for loop** same with PrintInfo(), Don't modify any other part of the program!
+
+ 
+------------------------ Lesson 49 - Nested For Loops ---------
+ 
+ Syntax:
+ --------
+ 
+ // This nested for loop excutes totally 3 x 5 = 15 times
+ 
+ for (initialization; condition; update) // i=3 Excutes 3 times 
+{ 
+	for (initialization; condition; update)  // i=5 This excutes 5 
+	{ 
+		// body of loop  This Excutes  5 each time ( 3 x 5 = 15)
+            so this inner for loop body excutes 15 times !!!
+	}
+}
+ 
+ // In star example Example #2 row(outer for Loop i) x column(inner for Loop j) 
+ 
+ Home Work from lesson #49 --- using nested loop
+ ------------------------
+ #1 Prit all possible alphabet:
+ AA
+ AB ... BA ... Zz
+ 
+ #2 Print stars inverted ( inner loop decreases)
+ **********
+ *********
+ *******
+ ....
+ *
+ #3 Repeat H.W #2 instead of stars print numbers 
+ 
+ #4 Same as hw # 3 but normal (Not invertesd) print numbers
+ 
+ #5 print 
+ A
+ AB
+ ...... 
+ ABCDEF
+ 
+ #6 Print numbers as 
+ 1 2 3 4 5 6 7 8 9 10
+ 2 3 4 5 6 7 8 9 10
+ 3 4 5 6 7 8 9 10 
+ ....
+ 10
+ 
+----------------------- Lesson #50 - While Loop --------------
+ 
+ Syntax
+ -------
+ 
+while (Condition)
+	{
+		// body of - while loop 
+	}
+ 
+ // while loop from 1 to 5
+	int i = 1;
+	while (i <= 5)
+	{
+		cout << i << endl;
+		i++;
+	}
+	
+	H.W
+	-----
+    #26 #27 #28 #29 #30 #32 #37 #46 #50
+	
+	Notes:
+	#30 factorial: Validate positive numbers
+	
+-------------------- Lesson #51 ---- Do - While Loop  ---------
+
+Syntax: 
+---------
+// Enters the loop at least once
+do
+	{	
+	// body of - do while loop
+	}
+		while (condition)
+-----		
+int i = 6;
+do
+{
+	cout << "Hello" << endl;
+	i++;
+} while (i <= 5);
+
+----------------------- Lesson #52 - Break Statement  ----
+
+// break;  breaks out of the loop with out excute the rest 
+    of the body loop code
+
+Syntax:
+-----------
+
+for (init; condition; update) {
+	// code
+	if (condition to break) {
+		break; -----------------------
+	}                                 |
+	// code                           |
+}                                     |
+// it Breaks out of the loop here. <--- 
+
+
+while (condition) {
+	// code
+	if (condition to break) {
+		break; ----------------|
+	}                          |
+	// code                    |
+                               |
+}                              |
+// it Breaks out of the <-------  
+        loop here.
+	
+--------------- Lesson #53 - Continue Statement ---- The End of the course 
+Syntax:
+------
+						-----------|							
+						|	       |
+						|		   |		
+						V		   |			   ----> while (condition) {
+for (init; condition; update) {    |			   |		// code	
+	 // code					   |			   |		if (condition to break) {
+	 if (condition to braek) {	   |			   ----------- continue;
+		  continue;  --------------|						}
+		  
+		}                                               // code	<--- This code will not excute
+                                                       }                 after continue ( Skips this part)   
+	 // code  <--- This code will not excute			
+                    after continue ( Skips this part)
+	}
+	
+ **** continue is like skip the code after continue !
+ 
+
+------------------- This is The End Of [[[03 - Programming Using C++ - Level 1 ]]] ------------------
+-----------------------------------------------------------------------------------------------------
+
+
+
+
+
+ 
+ 
