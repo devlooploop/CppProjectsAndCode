@@ -1,0 +1,473 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+
+// Problem #31/2 Shuffle Ordered array.
+
+/*
+Write a program to fill array with ordered numbers from 1 to N,
+	then print it, after that shuffle this array and print it after shuffle.
+
+Input:
+10
+
+Output:
+Array elements before shuffle: 
+1 2 3 4 5 6 7 8 9 10
+
+Array elements after shuffle:
+6 3 5 9 8 7 4 1 2 10
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int RandomNumber(int From, int To)
+{
+	//Function to generate a random number
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do {
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void FillArrayFrom1ToN(int arr[100], int arrLength) 
+{     
+
+	for (int i = 0; i < arrLength; i++)
+
+		arr[i] =  i + 1;
+} 
+
+void PrintArray(int arr[100], int arrLength)
+	{
+		for (int i = 0; i < arrLength; i++)
+			cout << arr[i] << " ";
+		cout << "\n";
+	}
+
+void Swap(int& A, int& B)
+{
+	int Temp;
+
+	Temp = A;
+	A = B;
+	B = Temp;
+
+}
+
+void ShuffleArray(int arr[100], int arrLength)
+{
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		Swap(arr[RandomNumber(1,arrLength) - 1], arr[RandomNumber(1, arrLength) - 1]);
+		
+	}
+
+}
+
+
+int main()
+{
+	//Seeds the random number generator in C++, called only once    
+	srand((unsigned)time(NULL));
+
+	int arr[100];
+
+	int arrLength = ReadPositiveNumber("How many elements ?\n");
+
+	cout << "\nArray elements before shuffle: \n";
+	FillArrayFrom1ToN(arr, arrLength);
+	PrintArray(arr, arrLength);
+	
+	cout << "\nArray elements after shuffle: \n";
+	ShuffleArray(arr, arrLength);
+	PrintArray(arr, arrLength);
+	
+	return 0;
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

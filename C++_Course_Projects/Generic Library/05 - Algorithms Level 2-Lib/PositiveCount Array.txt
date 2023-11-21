@@ -1,0 +1,17 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #44/2 Count Positive Numbers in Array
+
+
+int PositiveCount(int arr[100], int arrLength)
+{
+	int Counter = 0;
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		if (arr[i] >= 0)
+		{
+			Counter++;
+		}
+	}
+	return Counter;
+}

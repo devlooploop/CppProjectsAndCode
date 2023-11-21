@@ -1,0 +1,75 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problem #11 to #15 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// 
+// From Algorthim and Problem Solving 
+// Problem #14 Swap Numbers
+
+/*
+Write a program to ask the user to enter:
+• Number1
+• Number2
+Then print the two numbers , then Swap the two numbers and print them
+Example Inputs:
+10
+20
+Outputs:
+10
+20
+
+20
+10
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void ReadNumbers(float &Num1, float &Num2)
+{
+    cout << "Enter The 1st number \n";
+    cin >> Num1;
+
+    cout << "Enter The 2nd number \n";
+    cin >> Num2;
+
+}
+
+void SwapNumbers(float Num1, float Num2)
+{
+    float temp;
+
+    temp = Num1;
+    Num1 = Num2;
+    Num2 = temp;
+
+    cout << "\n" << Num1 << endl;
+    cout << Num2 << "\n";
+
+}
+
+void PrintResult()
+{
+    float Num1, Num2;
+
+    ReadNumbers(Num1, Num2);
+    SwapNumbers(Num1, Num2);
+}
+
+
+int main()
+{
+    
+   PrintResult();
+
+    return 0;
+}
+
+
+
+
+
+
+
+

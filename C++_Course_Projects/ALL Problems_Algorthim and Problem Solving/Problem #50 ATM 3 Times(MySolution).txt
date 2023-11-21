@@ -1,0 +1,321 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #46 to #50 Solutions
+// 
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #50 ATM PIN 3 Times
+
+/* Write a program to read the ATM PIN code from the user, then check if PIN Code = 1234, 
+then show the balanceto user, otherwise print “Wrong PIN” and ask the user to enter the PIN again.
+Only allow user to enter the PIN 3 times, if fails, print “Card is locked!”
+Assume User Balance is 7500.
+Input
+1234
+
+5151
+Outputs:
+Your Balance is: 7500
+Wrong PIN
+    */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string ReadPINCode()
+{
+    string PIN;
+    cin >> PIN;
+    return PIN;
+}
+
+void CheckPINCode(string PIN)
+{
+    int Attempts = 3;
+
+    while (Attempts > 0)
+    {
+        if (PIN == "1234")
+        {
+            cout << "Your Balance is 7500" << endl;
+            return;
+        }
+        else
+        {
+            cout << "Wrong PIN" << endl;
+        }
+
+        Attempts--;
+
+        if (Attempts == 0)
+        {
+            cout << "Card is locked!" << endl;
+            return;
+        }
+
+        cout << "Enter the PIN Code" << endl;
+        PIN = ReadPINCode();
+    }
+
+    cout << "Card is locked!" << endl;
+}
+
+int main()
+{
+    cout << "Enter the PIN Code" << endl;
+    string PIN = ReadPINCode();
+
+    CheckPINCode(PIN);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,223 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #36 to #40 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #36 Simple Calculator
+
+/*
+Write a program to ask the user to enter:
+• Number 1
+• Number 2
+• OperationType
+Then perform the calculation according to the Operation Type as follows:
+• “+” : add the two numbers.
+• “-” : Subtract the two numbers.
+• “*” : Multiply the two numbers.
+• “/” : Divide the two numbers.
+Example Inputs:
+10
+20
+*
+Outputs:
+200
+*/
+
+#include <iostream>
+
+using namespace std;
+
+enum enOperationType {
+    Addition = 1,
+    Subtraction = 2,
+    Multiplication = 3,
+    Division = 4,
+};
+
+void OperationMenu()
+{
+    cout << "***************\n";
+    cout << "(1) Addition: " << endl;
+    cout << "(2) Subtraction: " << endl;
+    cout << "(3) Multiplication: " << endl;
+    cout << "(4) Division: " << endl;
+    cout << "***************\n";
+}
+
+enOperationType ReadArhtOperationType(enOperationType Operation)
+{       
+    int x;
+    cout << "Please enter the Arthmatic Ops type? " << endl;
+    cin >> x;
+
+    return Operation = (enOperationType)x;
+    
+}
+
+void ReadTowNumber(float  &Number1, float &Number2)
+{
+    cout << "Please enter Number1 and Number2 ? \n";
+    cin >> Number1;
+    cin >> Number2;
+}
+
+int CheckAndCalculateOperationType(enOperationType OperationType, float Number1, float Number2)
+{
+
+    if(OperationType == enOperationType::Addition)
+    {
+        return Number1 + Number2;
+       
+    }
+    else if (OperationType == enOperationType::Subtraction)
+    {
+        return Number1 - Number2;
+    }
+    else if (OperationType == enOperationType::Multiplication)
+    {
+        return Number1 * Number2;
+    }
+    else if (OperationType == enOperationType::Division)
+    {
+        return Number1 / Number2;
+    }
+    else
+    {
+        cout << "Wrong Operation type Please enter right ops type\n";
+    }
+}
+
+
+int main()
+{
+    float Num1=0, Num2=0;
+    enOperationType Ops{};
+
+    OperationMenu();
+    ReadTowNumber(Num1, Num2);
+    cout << "\nResult = " << CheckAndCalculateOperationType(ReadArhtOperationType(Ops), Num1, Num2);
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

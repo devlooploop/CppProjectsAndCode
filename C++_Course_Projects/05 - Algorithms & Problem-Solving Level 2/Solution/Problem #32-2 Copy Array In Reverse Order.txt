@@ -1,0 +1,459 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #32/2 Copy Array In Reverse Order.
+
+/*
+Write a program to fill array with max size 100 with random numbers, from
+ 1 to 100, copy it to another array in reverse order and print it.
+
+Input:
+10
+
+Output:
+Array 1 elements : 
+64 8 62 19 2 21 15 74 96 85
+
+Array 2 elements after copying array 1 in reverse order:
+85 96 74 15 21 2 19 62 8 64
+
+Note : Don't use reverse for loop use normal for loop!!!!
+*/
+
+#include <iostream>
+using namespace std;
+
+int RandomNumber(int From, int To)
+{
+	//Function to generate a random number
+	int randNum = rand() % (To - From + 1) + From;
+	return randNum;
+}
+
+void FillArrayWithRandomNumbers(int arr[100], int& arrLength)
+{
+	cout << "\nEnter number of elements:\n";     
+	cin >> arrLength;
+
+	for (int i = 0; i < arrLength; i++)
+		arr[i] = RandomNumber(1, 100);
+}
+
+void PrintArray(int arr[100], int arrLength)
+{
+	for (int i = 0; i < arrLength; i++)
+		cout << arr[i] << " ";
+	cout << "\n";
+}
+
+int ReadPositiveNumber(string Message)
+{
+	int Number = 0;
+	do {
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number <= 0);
+
+	return Number;
+}
+
+void CopyArrayInReverseOrder(int arrSource[100], int arrDestination[100], int arrLength) 
+{ 
+	for (int i = 0; i < arrLength; i++) 
+		arrDestination[i] = arrSource[arrLength - 1 - i]; 
+}
+
+
+int main()
+{
+	//Seeds the random number generator in C++, called only once    
+	srand((unsigned)time(NULL));
+
+	int arr[100], arrLength;
+	
+	FillArrayWithRandomNumbers(arr, arrLength);
+
+	int arr2[100];
+	CopyArrayInReverseOrder( arr, arr2, arrLength);
+
+	cout << "\nArray 1 elements: \n";
+	PrintArray(arr, arrLength);
+
+	cout << "Array 2 elements after copy:\n";
+	PrintArray(arr2, arrLength);
+	
+	return 0;
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

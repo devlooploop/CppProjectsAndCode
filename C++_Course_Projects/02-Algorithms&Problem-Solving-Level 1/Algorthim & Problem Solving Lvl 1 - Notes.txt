@@ -1,0 +1,15 @@
+Algorthim & Problem Solving Lvl 1
+-----------------------------------
+
+الدرس السادس عشر - اولويات الحساب
+Order of Operations:-
+
+// Original repo/project file location
+C:\Users\wakanda\source\repos\test
+
+**From Left to Right
+BODMAS 
+Bracket(), Order √ x^2,  [Divide / or  Multiply *],  [Add+ or subtract -]
+
+PEMDAS
+Parentheses(), Exponents √ x^2,  Multiply * or Divide /,  Add or subtract

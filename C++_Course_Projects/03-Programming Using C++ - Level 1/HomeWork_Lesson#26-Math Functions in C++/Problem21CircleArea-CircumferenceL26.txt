@@ -1,0 +1,22 @@
+//Problem 21 Circle Area Along the Circumference
+//Lesson #26 - Math Functions in C++
+// after finding the result use floor and print the final result
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    float L, Area, PI = 3.14159;
+
+    cout << "Enter The Value:\n";
+    cin >> L;
+
+    Area =  pow(L,2)/(PI * 4);
+
+    cout << floor(Area)<< "\n";
+
+    return 0;
+}
+

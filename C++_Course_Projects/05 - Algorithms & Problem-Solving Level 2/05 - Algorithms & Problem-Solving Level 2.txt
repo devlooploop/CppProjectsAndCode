@@ -1,0 +1,516 @@
+05 - Algorithms & Problem-Solving Level 2
+--------------------------------------------------------
+
+*** #01/2  <--- problem #01 level 2  of the course
+// Naming files wrote like #01-2 instead of #01/2 due to forbidden symboles naming files
+
+visual basic 2022:
+// Ctrl + K D which automatically does the formating for you when press these keys.
+
+
+-------------- Problem #01/2 Multiplication Table 1 to 10 -----------------------
+
+// We devide the code to functions & procedures 
+	we use table header as procedure for it self 
+	
+--------- Problem #02/2 Print all prime numbers from 1 to N ---------------------------------------
+
+// nr 2 is a special prime number 
+
+// Prime number :- we take the mode % number from the 2 until the (number - 1) like:
+number = 5 , then we try if number % 2 !=0, number % 3 !=0, number % 4 !=0; 
+	we stop at number % 4 !=0 since the rule is check until (number-1) 
+		then we even can take the number until number / 2 to check half of the counter in this way the 
+		code would be faster since we check half of the counter!
+		
+
+// The condition `i * i <= num` is used in the for loop to optimize the algorithm. Instead of checking divisibility by all numbers up to `num`, we only need to check divisibility by numbers up to the square root of `num`.
+
+--------- Problem #03/2 Perfect Number -----------------------------------------
+
+
+--------- Problem #04/2 Print perfect numbers from 1 to N ----------------------
+
+
+----------- Problem #05/2 Print Digits in reverse Order ------------------------
+
+--------------------------- Problem #10/2 Print Digits in Order ---------------
+
+// Problem #10-2 Print Digits in Order
+
+--------------------------- Problem #11/2 Palindrome Number ---------------
+
+// Problem #11/2 Palindrome Number
+
+--------------------------- Problem #12/2 Inverted Number Pattern  ---------------
+
+// Problem #12-2 Inverted Number Pattern
+
+--------------------------- Problem #13/2 Number Pattern ---------------
+
+// Problem #13-2 Number Pattern
+
+--------------------------- Problem #14/2 Inverted Letter Pattern ---------------
+
+// Problem #14-2 Inverted Letter Pattern
+
+-------- Problem #15/2  Letter Pattern --------------------
+
+// Problem #15/2  Letter Pattern 
+
+------------------ Problem #16-2 All Words From AAA to ZZZ ------------
+
+// Problem #16-2 All Words From AAA to ZZZ
+
+// When you run the program You see t prints on the screen/console
+AAA then AAB ... ZZZ, but because the buffer can't store all the words, then you'll see MSA ... MSB instead of AAA.
+
+------------------ Problem #17-2 Guess a 3-Letter Password ------------
+
+// Problem #17-2 Guess a 3-Letter Password
+
+
+------------- Problem #18/2 Encrypt/Decrypt Text ------------
+
+// Problem #18/2 Encrypt/Decrypt Text
+
+/* Within the for loop, each character in the "Text" string is modified by adding the encryption key to its ASCII value. 
+	The ASCII value of a character can be obtained by casting the character to an integer using "(int) Text[i]". 
+	 After adding the encryption key, the resulting integer is cast back to a character using "char()". 
+	  This effectively shifts the character by the encryption key amount.  */
+
+ string EncryptText(stringText, shortEncryptionKey) 
+ { 
+	for (int i = 0; i <= Text.length(); i++) 
+	{ 
+		Text[i] = char((int) Text[i] + EncryptionKey); 
+	} 
+	returnText; 
+ }
+
+--------------------- Problem #19/2 Random 3 Number from 1 to 10 -----
+
+// Problem #19/2 Random 3 Number from 1 to 10
+
+// If you want to generate numbers from 1 to 10 Or Btwen 1 & 10 (1,10)
+  use : the include  
+  
+  #include <ctime> 
+  #include <cstdlib>
+  
+	1 + rand() % 10 ; 
+	
+	Or from 1 To 10  :
+		1 + rand() % 100 ;
+		
+
+//Seeds the random number generator in C++, called only once in main()  srand((unsigned)time(NULL));
+
+
+without srand() the rand() will not generate random numbers every time you run it.
+
+
+If you put the "srand((unsigned)time(NULL));" 
+outside main() for example inside a function you make, that would not randomize the number(s), every time gives you the same number!!!
+
+
+------------ Problem #20/2 Random Small Letter, Capital Letter, Special Character, and Digit in order  --------
+
+// Problem #20/2 Random Small Letter, 
+	Capital Letter, Special Character, 
+	and Digit in order
+	
+----------- Problem #21/2 Generate Keys --------------------------------
+
+// Problem #21/2 Generate Keys
+
+// GenerateWord(enChartype Chartype );   // can be used to generate passwords
+
+
+----------- Problem #22/2 Repeated Elements Count In Array -----------------------------
+
+// Problem #22-2 Repeated Elements Count In Array
+
+----------- Problem #23/2 Fill Array with random numbers from 1 to 100 -----------------------------
+
+// Problem #23/2 Fill Array with random numbers from 1 to 100
+
+
+----------- Problem #38-2 Copy Odd Numbers to a new Array -------------
+
+
+// In case the length of the array (2nd array for copying) unknown we use the following procedure:
+
+
+void AddArrayElement(int Number, int arr[100], int& arrLength)
+{
+
+	//its a new element so we need to add the length by 1
+	arrLength++;
+	arr[arrLength - 1] = Number;
+
+}
+
+//In the procedure bellow we took by ref " &arrLengthDestination" because the (arrLengthDestination OR arr2Length) is not known yet otherwise it will print nothing ..... 
+
+void CopyOddNumbersToDestinationArray(int arrSource[100], int arrDestination[100], int arrLength, int &arrLengthDestination)
+
+// if the courser of visual syudio stand on a function parameter and press twice ctr will show your where the parameter will go!
+
+// If the courser on a function or Procedure and press right mouse click "Peek Defenition" will show
+the original code of the function!
+
+
+------------  Problem #48/2 MyFloor -----------------------
+
+// From Now one use functions from the Library We just made 
+//these functions to understand the logic behind it
+
+------------  Problem #50/2 Mysqrt -----------------------
+
+// sqr of 0.5 is the root of the number pow(Number, 0.5) --> pow(25, 0.5) == 5;
+
+
+--------- // Project #1 Requirements: (paper, Rock, Scissors) -------
+
+// void StartGame(){...}  
+	is the Game loop as long as PlayAgain is true it loops through:
+	ResetScreen();
+	stGameResuts GameResults = PlayGame(ReadHowManyRounds());
+	ShowGameOverScreen();
+	ShowFinalGameResults(GameResults);
+
+----- // Project # 2 Math Game --- End of Course-5 Algorthim&Problem Solving Level 2 ------
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

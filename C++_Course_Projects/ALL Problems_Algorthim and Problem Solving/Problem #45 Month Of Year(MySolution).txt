@@ -1,0 +1,339 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #41 to #45 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+
+// Problem #45 Month Of Year
+
+/*Write a program to ask the user to enter:
+• Month
+Then print the day as follows:
+• 1 Print January
+• 2 Print February
+• 3 Print March
+• 4 Print April
+• 5 Print May
+• 6 Print June
+• 7 Print July
+• 8 Print Agust
+• 9 Print September
+• 10 Print ctober
+• 11 Print November
+• 12 Print December
+• Otherw=rint “Wrong Month” and ask the use to enter the Month again.
+Example Inputs:
+11
+Outputs:
+November */
+
+#include <iostream>
+#include<string>
+
+using namespace std;
+
+enum enMonth { Jan = 1, Feb = 2, Mar = 3, Apr = 4, 
+    May = 5, Jun = 6, 
+    Jul = 7, Aug = 8, 
+    Sep = 9, Oct = 10, 
+    Nov = 11, Dec = 12
+};
+
+int ReadNumberInRange( string Message ,int From, int To)
+{
+    int Number = 0;
+    do 
+    {
+        cout << Message << endl;
+        cin >> Number;
+    } while ( Number < From || Number > To );
+
+    return Number;
+}
+
+enMonth ReadMonth()
+{
+    return (enMonth) ReadNumberInRange( "Enter Number Btween 1 & 12", 1, 12 );
+} 
+
+void ShowMonthMenue()
+{
+    cout << "************************\n";
+    cout << "   Month Of The Year    \n";
+    cout << "************************\n";
+    cout << "1: January\n";
+    cout << "2: February\n";
+    cout << "3: March\n";
+    cout << "4: April\n";
+    cout << "5: May\n";
+    cout << "6: June\n";
+    cout << "7: July\n";
+    cout << "8: August\n";
+    cout << "9: September\n";
+    cout << "10: Octobor\n";
+    cout << "11: Novomber\n";
+    cout << "12: October\n";
+    cout << "13: December \n";
+    cout << "************************\n"; 
+
+}
+
+string GetMonthName(enMonth month)
+{
+    switch (month)
+    {
+    case enMonth::Jan:
+        return  "January\n";
+    case enMonth::Feb:
+        return "February\n";
+    case enMonth::Mar:
+        return "March\n";
+    case enMonth::Apr:
+        return "April\n";
+    case enMonth::May:
+        return "May\n";
+    case enMonth::Jun:
+        return "June\n";
+    case enMonth::Jul:
+        return "July\n";
+    case enMonth::Aug:
+        return "August\n";
+    case enMonth::Sep:
+        return "September\n";
+    case enMonth::Oct:
+        return "Octobor\n";
+    case enMonth::Nov:
+        return "Novomber\n";
+    case enMonth::Dec:
+        return "December\n";
+    default:
+        return "Wrong Month Enter the month again\n";
+    }
+}
+
+int main()
+{
+
+    ShowMonthMenue();
+
+    enMonth TheMonth = ReadMonth();
+
+    cout << "It's " << GetMonthName(TheMonth) << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

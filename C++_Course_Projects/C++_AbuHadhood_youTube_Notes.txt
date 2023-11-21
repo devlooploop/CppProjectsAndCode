@@ -1,0 +1,167 @@
+
+Algorthim & Problem Solving Lvl 1
+-------------------------------
+الدرس السادس عشر - اولويات الحساب
+Order of Operations:-
+
+// Original repo/project file location
+C:\Users\wakanda\source\repos\test
+
+**From Left to Right
+BODMAS 
+Bracket(), Order √ x^2,  [Divide / or  Multiply *],  [Add+ or subtract -]
+
+PEMDAS
+Parentheses(), Exponents √ x^2,  Multiply * or Divide /,  Add or subtract
+
+-----------------03 - Programming Using C++ - Level 1---------------------------------
+03 - Programming Using C++ - Level 1
+
+Lesson #30 - Data Type Conversion
+
+- Convert double to int :-
+
+int Num1;
+double Num2 = 18.99;
+
+Num1 = Num2; // Implicit(automatic) conversion from double to int, diffrent from compile to another
+
+Num1 = (int) Num2; // Explicit Conversion (C style)
+
+Num1 =  int (Num2); // Explicit Conversion // conversion via int function takes parameter (Num2)
+
+cout << Num1 << endl; // ouputs 18 
+
+-------
+Exmp 2
+#include <string> // Contain string conversion functions 
+string str = "123.456";
+
+// convert string to integer 
+int num_int = stoi(str);
+
+// convert string to float
+float num_float = stof(str);
+
+// convert string to double
+double num_double = stod(str);
+
+cout << "num_int = " << num_int << endl;
+cout << "num_float = " << num_float << endl;
+cout << "num_double = " << num_double << endl;
+
+****************************
+// ** to_string(parameter) converts from int or any data type to string 
+// The output would be some number followed by zeros because it converted to string
+
+example:- *** to_string  ***
+
+int Num1 = 123;
+double Num2 = 18.99;
+
+string St1, St2;
+St1 = to_string(Num1);
+St2 = to_string(Num2);
+
+cout << St1 << end;
+cout << St2 << end;
+
+----------------------------- Lesson #31-Strings -----------------------------------
+
+length() // prints the length of the string
+
+string MyString = "ABCDEZ";
+MyString[2];   // prints position nr 3 or C, prints index
+
+getline(cin, FullName)  // gets first name and last name
+
+-------------------------------Lesson #32 - Functions Part 1--------------------------------
+
+// *** Functions is type of dervied data type
+
+void myFunction() {  
+
+// Any function has no return it's called Procedure ****
+}
+
+int main() { 
+	myFunction();  //**** To call func, just wright the function's name 
+	
+	return 0;
+	}
+-------------------Lesson #33 - Solving the getline() Problem---------------------------
+// ***To solve getline() problem we use ignore();
+
+cin.ignore(1, '\n');
+--------------------------------Lesson #34 - Functions Part II - Functions vs Procedures----
+
+// Functions returns same data type as function defiend
+
+// ** Functions has return in it Procedures don'takes
+
+float MyFunc(){
+
+	float x, float y;
+	return x * y;
+	}
+------------Lesson #34 - Functions Part II - Functions vs Procedures-------------------
+
+// Functions treated as variabls it can be used with operations as shown here
+   cout << mySumFunction() +10 /20;  
+   
+--------------------------- Lesson #35 - Function Part 3 - Parameters ----------
+Home Work
+#1, #2, #14, #15, #16, #18, #19, #20, #21, #22, #23, #31, #32, #42, #43
+
+-------Lesson #36 - Variable Scope/ Local vs Global  Variables-------------
+
+// *** to access global variable x use ::x
+
+Local variable finishs its life cycle (die) when function is done!!!!
+
+To modify the global variable x, ::x++ that add increase ::x by 1 
+
+---------------- Lesson #38 - Structures and Functions - Re-usability ------
+
+//** parameter in Function must be passed by refernce otherwise will the parameter 
+	  gets back empty outside the function (inside main())!
+	  
+// Example : void ReadInfo(strInfo &Info) {...}
+
+
+****** cin >> PersonID.isMarried;  // Not sure how to use cin with enum ????????
+
+------------ Lesson #40 - Arrays with Functions -------------
+/// In visual Studio when search for a function use *** right click on the function 
+/// you search for then click of " Go to definition " F12
+
+*** Array can't be defined by referance unlike struct / structer
+*** Array send as parameter by referance as defult  
+
+void ReadArrayData(int &x[3]);			// This is illegal 
+
+in main() when you send the array as function parameter you send only Array's name x
+ReadArrayData(x);  *******
+
+---------------Lesson #41 - Arrays of Structure ------------
+
+
+In this home work we used procedure calling another procedure
+
+ReadInfo(stInfoPerson &info){...};
+
+void ReadInfoArray(stInfoPerson PersonArray[2]) {
+
+	ReadInfo(PersonArray[0]);
+	ReadInfo(PersonArray[1]);
+
+}
+
+--------------- Lesson #42 - Conditional Statements: IF, IF ... Else Statement ----
+
+
+
+
+
+
+

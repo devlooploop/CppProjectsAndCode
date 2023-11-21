@@ -1,0 +1,15 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #21/2 Generate Keys
+
+string GenerateWord(enCharType CharType, short Length)
+{
+    string Word;
+
+    for (int i = 1; i <= Length; i++)
+    {
+        Word = Word + GetRandomCharacter(CharType);
+
+    }
+    return Word;
+
+}

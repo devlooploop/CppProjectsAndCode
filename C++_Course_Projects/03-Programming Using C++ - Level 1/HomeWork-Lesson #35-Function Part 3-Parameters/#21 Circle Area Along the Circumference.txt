@@ -1,0 +1,22 @@
+// Lesson #35 - Function Part 3 - Parameters
+// Problem-21-Circle-Area-Circumference
+
+#include <iostream>
+
+using namespace std;
+
+float CircleCircumference(float L) {
+	float PI = 3.14;
+
+	return  (L * L) / (4 * PI);
+}
+
+int main()
+{
+	float x, PI = 3.14;
+
+	cin >> x;
+
+	cout << CircleCircumference(x);
+}
+

@@ -1,0 +1,34 @@
+// Course #04- Solutions to Algorithms & Problem-Solving Level 1
+// Use Procedures and Functions in all the solutions
+// Problem #1 Print Name
+// Write a program to print Name on screen
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void PrintName(string Name)
+{
+	cout << "\nYour Name is " << Name;
+}
+
+int main()
+{
+	PrintName("Majid");
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

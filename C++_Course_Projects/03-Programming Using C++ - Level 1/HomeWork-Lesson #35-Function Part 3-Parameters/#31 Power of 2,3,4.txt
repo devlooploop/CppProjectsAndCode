@@ -1,0 +1,30 @@
+// Lesson #35 - Function Part 3 - Parameters
+// Problem 31 Power of 2,3,4
+// Input 3   ouput 9 27 81
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void PowerOfThreeInt(int num) {
+ 
+   cout << "\n" << pow(num, 2) << endl << pow(num, 3) << endl << pow(num, 4) << "\n";
+
+}
+
+int main()
+{
+    int a;
+
+    cout << "Enter a number\n";
+    cin >> a;
+
+    cout << "Output:" << "\n";
+    PowerOfThreeInt(a);
+
+    return 0;
+
+}
+
+

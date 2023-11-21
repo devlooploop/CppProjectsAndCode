@@ -1,0 +1,12 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #36/2 Add Array Element Simi Dynamic.
+
+
+void AddArrayElement(int Number, int arr[100], int& arrLength) 
+{ 
+
+//its a new element so we need to add the length by 1
+arrLength++; 
+arr[arrLength - 1] = Number; 
+
+}

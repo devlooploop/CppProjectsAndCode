@@ -1,0 +1,32 @@
+// Lesson #35 - Function Part 3 - Parameters
+// Problem 23 Circle Area circle Described Around an Arbitrary Triangle
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double CircleAreaAroundTringle(double a, double b, double c) {
+
+    double T, p, Area, PI = 3.14159;
+
+    p = (a + b + c) / 2;
+
+    T = (a * b * c) / (4 * sqrt(p * (p - a) * (p - b) * (p - c)));
+
+    Area = PI * T * T;
+
+    return Area;
+}
+
+int main() {
+    double x, y, z, T, p, PI = 3.14159;
+
+    cout << "Enter The Value:\n";
+    cin >> x >> y >> z;
+
+    cout << round(CircleAreaAroundTringle( x, y, z)) << "\n";
+
+    return 0;
+}
+

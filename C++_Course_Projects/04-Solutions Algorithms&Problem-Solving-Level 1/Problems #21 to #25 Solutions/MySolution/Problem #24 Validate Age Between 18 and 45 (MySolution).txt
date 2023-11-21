@@ -1,0 +1,109 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+//Problems #21 to #25 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+//Problem #24 Write a program to ask the user to enter :
+
+/*• Age
+If age is between 18 and 45 print “Valid Age” otherwise print
+“Invalid Age”
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+ void ReadAge(unsigned short int& Age)
+{
+    cout << "Enter your Age\n";
+    cin >> Age;
+} 
+
+bool ValidateAge(unsigned short int Age, unsigned short int From, unsigned short int To)
+{
+    if (Age >= 18 && Age <= 45)
+
+        return true;
+    else
+        return false;
+}
+
+void PrintResult(bool Result)
+{
+    if (Result == true) 
+        cout << "Valid Age\n";
+    else
+        cout << "Invalid Age\n" << endl;
+}
+
+
+int main() {
+    
+    unsigned short int x=0, y=0, Age;
+
+    ReadAge(Age);
+
+    PrintResult(ValidateAge(Age, x, y));
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

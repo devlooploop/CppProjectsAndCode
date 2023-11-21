@@ -1,0 +1,25 @@
+// Lesson #35 - Function Part 3 - Parameters
+// Problem #19_CircleOfArea_Diameter
+
+#include <iostream>
+
+using namespace std;
+
+float CircleAreaDiameter(float D) {
+
+    float PI = 3.14;
+
+    return (PI * D * D) / 4;
+
+}
+
+int main()
+{
+    float PI = 3.14, X;
+
+    cin >> X;
+    cout << endl << CircleAreaDiameter(X);
+
+    return 0;
+}
+

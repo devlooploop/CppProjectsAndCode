@@ -1,0 +1,13 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #21/2 Generate Keys
+
+string  GenerateKey()
+{
+    string Key = "";
+    Key = GenerateWord(enCharType::CapitalLetter, 4) + "-";
+    Key = Key + GenerateWord(enCharType::CapitalLetter, 4) + "-";
+    Key = Key + GenerateWord(enCharType::CapitalLetter, 4) + "-";
+    Key = Key + GenerateWord(enCharType::CapitalLetter, 4);
+   
+    return Key;
+}

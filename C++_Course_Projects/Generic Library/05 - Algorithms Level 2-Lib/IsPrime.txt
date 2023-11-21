@@ -1,0 +1,14 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #02/2 Print All Prime Numbers from 1 to N
+
+
+enPrimNotPrime CheckPrime(int Number) 
+{ 
+    int M = round(Number / 2); 
+    for (int Counter = 2; Counter <= M; Counter++)      
+    {     
+        if (Number % Counter == 0) returnenPrimNotPrime::NotPrime;      
+        
+    }     returnenPrimNotPrime::Prime; 
+    
+}

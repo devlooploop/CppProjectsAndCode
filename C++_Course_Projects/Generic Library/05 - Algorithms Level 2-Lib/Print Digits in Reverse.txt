@@ -1,0 +1,14 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #05/2 Print Digits in reverse Order.
+
+void PrintDigits(int Number)
+{
+	int  Remainder = 0;
+
+	while (Number > 0)
+	{
+		Remainder = Number % 10;
+		Number = Number / 10;
+		cout << Remainder << endl;
+	}
+}

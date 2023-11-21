@@ -1,0 +1,143 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+//Problems #26 to #30 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// #26 Print Numbers from 1 to N (Using For - While - Do-While loop)
+/*
+Write a program to print numbers from 1 to N.
+Input
+10
+Outputs:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int ReadNumber()
+{
+	int N;
+	cout << "Enter the N Value \n";
+	cin >> N;
+	cout << "******************************\n";
+
+	return N;
+}
+
+void PrintRangeFrom1toN_UsingWhile(int N)
+{
+	int Counter = 0;
+
+	cout << "Range printed using While Statement: \n";
+
+	while (Counter < N)
+	{
+		Counter++;
+		cout << Counter << endl;
+		
+	}
+}
+
+void PrintRangeFrom1toN_UsingDoWhile(int N)
+{
+	int Counter = 0;
+
+	cout << "Range printed using Do..While Statement: \n";
+	do
+	{
+		Counter++;
+		cout << Counter << endl;
+
+	} while (Counter < N);
+}
+
+void PrintRangeFrom1toN_UsingFor(int N)
+{
+	
+	cout << "Range printed using For loop Statement: \n";
+	
+	for(int Counter = 1; Counter <= N; Counter++ )
+	{
+		cout << Counter << endl;
+	} 
+}
+
+int main()
+{
+	int N = ReadNumber();
+
+	  PrintRangeFrom1toN_UsingWhile(N);
+	//PrintRangeFrom1toN_UsingDoWhile(N);
+	//PrintRangeFrom1toN_UsingFor(N);
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

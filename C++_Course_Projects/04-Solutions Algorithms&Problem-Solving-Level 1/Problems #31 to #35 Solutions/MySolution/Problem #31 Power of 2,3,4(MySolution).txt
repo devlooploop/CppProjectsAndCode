@@ -1,0 +1,134 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #31 to #35 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #31 Power of 2,3,4 
+/*
+Write a program to ask the user to enter:
+• Number
+Then Print the Number^2 , Number^3 , Number^4
+Example Inputs:
+3
+Outputs:
+9
+27
+81
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int ReadNumbers()
+{
+    int Num;
+    cout << "Enter a number\n";
+    cin >> Num;
+    return Num;
+}
+
+int PowerOfTow(int Base)
+{
+    return Base * Base;
+}
+
+int PowerOfThree(int Base)
+{
+    return Base * Base * Base;
+}
+
+int PowerOfFour(int Base)
+{
+    return Base * Base * Base * Base;
+}
+
+int main()
+{
+ 
+  int Number =  ReadNumbers();
+
+    cout << "Output :\n" << PowerOfTow(Number) << "\n" << PowerOfThree(Number) << "\n"
+        << PowerOfFour(Number);
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #11-2 Palindrome Number
+
+bool IsPalindromeNumber(int Number) 
+	{ 
+		return Number == ReverseNumber(Number); 
+	}

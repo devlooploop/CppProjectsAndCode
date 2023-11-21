@@ -1,0 +1,29 @@
+// Course 06 - Introduction to Programming Using C++ Level 2
+//  Lesson #09 - Ternary Operator: Short Hand IF
+
+// Write a program to do the following:
+// - Using Ternary Operator:
+//	Program to check if the number is Positive or Negative.
+// 	Program to check if the number is Zero, Positive or 
+//   Negative. (Use nested ternary operators).
+
+#include<iostream>
+#include "InputReadMyLib.h"
+using namespace std;
+
+
+int main() 
+{ 	
+	int Number = InputReadMyLib::ReadNumber();
+
+	string Num = (Number >= 0) ? "Positive" : "Negative";
+	cout << Num << endl;
+
+	//(Number >= 0) ? cout <<"Positive" : cout <<"Negative"; this is another way to do it
+
+
+	(Number == 0) ? cout << "Zero" :  (Number > 0) ? cout << "Positive" : cout << "Negative" ;
+
+	
+	return 0; 
+}

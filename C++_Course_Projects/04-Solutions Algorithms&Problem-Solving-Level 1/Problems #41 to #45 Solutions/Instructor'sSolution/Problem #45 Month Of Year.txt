@@ -1,0 +1,311 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #41 to #45 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #45 Month Of Year
+
+/*Write a program to ask the user to enter:
+• Month
+Then print the day as follows:
+• 1 Print January
+• 2 Print February
+• 3 Print March
+• 4 Print April
+• 5 Print May
+• 6 Print June
+• 7 Print July
+• 8 Print Agust
+• 9 Print September
+• 10 Print ctober
+• 11 Print November
+• 12 Print December
+• Otherwise wright “Wrong Month” and ask the use to enter the Month again.
+Example Inputs:
+11
+Outputs:
+November */
+
+#include <iostream>
+#include<string>
+
+using namespace std;
+
+enum enMonthOfYear { 
+                     Jan = 1, Feb = 2, Mar = 3, Apr = 4, May = 5, Jun = 6, 
+                     Jul = 7, Aug = 8, Sep = 9, Oct = 10, Nov = 11, Dec = 12
+};
+
+int ReadNumberInRange( string Message ,int From, int To)
+{
+    int Number = 0;
+    do 
+    {
+        cout << Message << endl;
+        cin >> Number;
+    } while ( Number < From || Number > To );
+
+    return Number;
+}
+
+enMonthOfYear ReadMonthOfYear()
+{
+    return (enMonthOfYear) ReadNumberInRange( "Please enter a Month [1 to 12] ", 1, 12 );
+} 
+
+string GetMonthOfYear(enMonthOfYear Month)
+{
+    switch (Month)
+    {
+    case enMonthOfYear::Jan:
+        return  "January\n";
+    case enMonthOfYear::Feb:
+        return "February\n";
+    case enMonthOfYear::Mar:
+        return "March\n";
+    case enMonthOfYear::Apr:
+        return "April\n";
+    case enMonthOfYear::May:
+        return "May\n";
+    case enMonthOfYear::Jun:
+        return "June\n";
+    case enMonthOfYear::Jul:
+        return "July\n";
+    case enMonthOfYear::Aug:
+        return "August\n";
+    case enMonthOfYear::Sep:
+        return "September\n";
+    case enMonthOfYear::Oct:
+        return "Octobor\n";
+    case enMonthOfYear::Nov:
+        return "Novomber\n";
+    case enMonthOfYear::Dec:
+        return "December\n";
+    default:
+        return "Wrong Month Enter the month again\n";
+    }
+}
+
+
+int main()
+{
+
+    cout << GetMonthOfYear(ReadMonthOfYear()) << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

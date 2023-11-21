@@ -1,0 +1,16 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #40 /2 Copy Distinct Numbers to Array
+
+
+void CopyDistinctNumbersToArray(int arrSource[100], int arrDestination[100], int SourceLength, int &DestinationLength)
+{
+	for (int i = 0; i < SourceLength; i++)
+	{
+		if (!IsNumberInArray(arrSource[i], arrDestination, DestinationLength))
+		{
+			AddArrayElement(arrSource[i], arrDestination, DestinationLength);
+		}
+		
+	}
+		
+}

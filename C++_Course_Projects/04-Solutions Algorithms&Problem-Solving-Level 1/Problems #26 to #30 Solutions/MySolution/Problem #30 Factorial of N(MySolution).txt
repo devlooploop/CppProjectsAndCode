@@ -1,0 +1,150 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+//Problems #26 to #30 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+/* Problem #30 Factorial of N (Solve with While, do..while & For)
+
+Write a program to calculate factorial of N!
+Example: factorial of 6 --> 6 x 5 x 4 x 3 x 2 x 1 = 720
+
+Input
+6
+Outputs:
+720
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int ReadNumber()
+{
+    int N;
+    cout << "Enter the number\n";
+    cin >> N;
+
+    return N;
+}
+
+int PrintFactorialOfNUsingWhile(int N)
+{
+    int i = 0;
+    int Factorial = 1;
+    cout << "Using While loop \n";
+    while (N != 0)
+    {
+        Factorial = Factorial * N;
+        N = N - 1;
+        i++;
+    }
+    return Factorial;
+    
+}
+
+int PrintFactorialOfNUsingDoWhile(int N)
+{
+    int i = 0;
+    int Factorial = 1;
+
+    cout << "\nUsing Do...While loop \n";
+    
+    do
+    {
+        Factorial = Factorial * N;
+        N = N - 1;
+        i++;
+
+    } while (N != 0);
+
+    return Factorial;
+}
+
+int PrintFactorialOfNUsingFor(int N)
+{
+    
+    int Factorial = 1;
+
+    cout << "\nUsing For loop \n";
+
+    for (int i = 0; N != 0; i++)
+    {
+        Factorial = Factorial * N;
+        N = N - 1;
+    }
+
+    return Factorial;
+}
+
+int main()
+{
+    int N = ReadNumber();
+
+   cout << PrintFactorialOfNUsingWhile(N);
+   cout << PrintFactorialOfNUsingDoWhile(N);
+   cout << PrintFactorialOfNUsingFor(N);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

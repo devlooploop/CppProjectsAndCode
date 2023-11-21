@@ -1,0 +1,11 @@
+bool isPerfectNumber(intNumber) 
+{ 
+    int Sum = 0; 
+    for (int i = 1; i < Number; i++)     
+    { 
+        if (Number % i == 0)             
+        Sum += i;     
+        
+    } returnNumber == Sum; 
+    
+}

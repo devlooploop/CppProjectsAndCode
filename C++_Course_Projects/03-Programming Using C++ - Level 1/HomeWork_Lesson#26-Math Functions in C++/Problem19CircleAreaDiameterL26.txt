@@ -1,0 +1,22 @@
+//19 Circle Area Through Diameter 
+//Lesson 26 Math Functions
+// after finding the result use ceil and print the final result.
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    float D, Area, PI = 3.14159;
+
+    cout << "Enter radius value:\n";
+    cin >> D;
+
+
+    Area =  PI * pow(D,2)/4;
+    cout << ceil(Area)<< "\n";
+
+    return 0;
+}
+

@@ -1,0 +1,314 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #41 to #45 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #43 Seconds to Days Hours Minutes Seconds 
+
+/*
+Write a program that inputs the number of seconds and changes it to days, hours, minutes, and seconds
+Input
+193,535
+Output :
+2:5:45:35
+*/
+
+#include <iostream>
+
+
+using namespace std;
+
+int ReadPositiveNumber(string Message)
+{
+    int Number = 0;
+   
+    do
+    {
+        cout << Message << endl;
+        cin >> Number;
+
+    } while (Number <= 0);
+
+    return Number;
+}
+
+int SecondsToDays(int InputSeconds)
+{
+    int SecPerDay = 24 * 60 * 60;
+
+    return floor( InputSeconds / SecPerDay );
+
+}
+
+int RemainderSecondsToDays(int InputSeconds)
+{
+    int SecPerDay = 24 * 60 * 60;
+    
+    return InputSeconds % SecPerDay; 
+
+}
+
+int SecondsToHours(int InputSeconds)
+{
+    int SecPerhour;
+
+    SecPerhour = 60 * 60;
+
+    SecPerhour = floor(RemainderSecondsToDays(InputSeconds) / SecPerhour);
+
+    return SecPerhour;
+}
+
+int RemainderSecondsToHours(int InputSeconds)
+{
+    int SecPerhour;
+
+    SecPerhour = 60 * 60;
+
+    return floor(RemainderSecondsToDays(InputSeconds) % SecPerhour);
+   
+}
+
+int SecondsToMinutes(int InputSeconds)
+{
+    int SecPerMinute = 60;
+
+    SecPerMinute = floor(RemainderSecondsToHours(InputSeconds) / SecPerMinute);
+    
+    return SecPerMinute;
+}
+
+int RemainderSecondsToMinutes(int InputSeconds)
+{
+    int SecPerMinute = 60;
+
+    return floor(floor(RemainderSecondsToHours(InputSeconds) % SecPerMinute));
+
+}
+
+
+int main() {
+
+   float x = ReadPositiveNumber("Enter Seconds");
+  
+    cout << SecondsToDays(x) << ":" << SecondsToHours(x) << ":" 
+        << SecondsToMinutes(x) << ":" << RemainderSecondsToMinutes(x);
+  
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

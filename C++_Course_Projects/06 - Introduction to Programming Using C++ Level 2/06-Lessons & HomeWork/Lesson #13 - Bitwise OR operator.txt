@@ -1,0 +1,15 @@
+// Course 06 - Introduction to Programming Using C++ Level 2
+// Lesson #13 - Bitwise OR operator
+
+#include<iostream>
+using namespace std;
+
+
+int main() 
+{ 	
+	
+	cout << "Result:" << (12 | 25); 
+	
+
+	return 0; 
+}

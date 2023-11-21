@@ -1,0 +1,12 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #31/2 Shuffle Ordered array.
+
+int Swap(int& A, int& B)
+{
+	int Temp;
+
+	Temp = A;
+	A = B;
+	B = Temp;
+
+}

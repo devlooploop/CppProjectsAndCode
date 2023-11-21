@@ -1,0 +1,19 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+
+// Problem #41/2 Is Palindrome Array
+
+bool IsPalindrome(int arr[22], short arrLength)
+{
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		
+		if (arr[i] != arr[arrLength - i - 1])
+		{
+			return false;
+		}
+
+	}
+
+	return true;
+}

@@ -1,0 +1,30 @@
+Lesson #26 - Math Functions in C++
+---------------------------------------------
+// Don't forget to put all Lesson #26 Home Work inside folder -->> 03 - Programming Using C++ - Level 1  -->> HomeWork_Lesson#26-Math Functions in C++
+
+
+Home Work
+----------
+"" = Done
+ "16", "18", "19", "20", "21", "22", "23", "31", "32", "42", "43"
+
+Notes regarding home work :-
+---------------------------
+
+#16:          use pow inside sqrt
+#18:,#19,#20: after finding the result use ceil and print the final result.
+#21,#22:      after finding the result use floor and print the final result
+#23, #31, #32, #42, #43:
+after finding the result use round and print the final results
+
+// Only as referance:-
+https://en.cppreference.com/w/cpp/header/cmath
+
+// Most used Functions in cmath library
+---------------
+round()
+sqrt()
+pow()
+ceil()
+floor()
+abs()

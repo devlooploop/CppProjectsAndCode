@@ -1,0 +1,23 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #12 - Output (Print) 
+// Print stars
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    cout << "***********************\n";
+    cout << "***********************\n";
+    cout << "***********************\n";
+    cout << "***********************\n";
+
+        return 0;
+}
+
+
+
+
+

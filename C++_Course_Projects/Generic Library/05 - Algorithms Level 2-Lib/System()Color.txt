@@ -1,0 +1,29 @@
+
+
+
+
+system("Color 4F"); // Red Screen
+system("Color 2F"); // Green Screen
+
+
+https://cppqa.blogspot.com/2013/11/colour-coding-in-c-first-time-i-saw.html
+
+system("Color 4F"); // 4 = Red background, F = Bright wighte text
+
+
+ To change whole screen colour i.e. foreground (text) and background, it is very simple and         easy command.
+
+The header file for this command is :                   <windows.h>
+The command   is :                                          system("Colour _ _");
+
+In place of _ _ you have to enter colour combination you want ; first place takes background colour and 2nd place takes foreground colour (text colour) this is list of all colours available for this command:
+1_____Blue                                       A______Light Green
+2_____Green                                    B______Light Aqua
+3_____Aqua                                      C______Light Red
+4_____Red                                        D______Light Purple
+5_____Purple                                   E______Light Yellow
+6_____Yellow                                   F______Bright White 
+7_____White
+8_____Gray
+9_____Light Blue
+0_____Black

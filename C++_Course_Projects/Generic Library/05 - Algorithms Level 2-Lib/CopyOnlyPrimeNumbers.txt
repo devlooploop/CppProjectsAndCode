@@ -1,0 +1,16 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #29/2 Copy only Prime numbers.
+
+void CopyOnlyPrimeNumbers(int arrSource[100], int arrDestination[100], int arrLength, int& arr2Lenght)
+	{
+		int Counter = 0;
+		for (int i = 0; i < arrLength; i++)
+		{
+			if (CheckPrime(arrSource[i]) == enPrimNotPrime::Prime)
+			{
+				arrDestination[Counter] = arrSource[i];
+				Counter++;
+			}
+		}
+		arr2Lenght = --Counter;
+	}

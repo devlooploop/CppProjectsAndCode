@@ -1,0 +1,8 @@
+int ReadNumber()
+{
+	int Number;
+	cout << "Please enter a number? ";
+	cin >> Number;
+
+	return Number;
+}

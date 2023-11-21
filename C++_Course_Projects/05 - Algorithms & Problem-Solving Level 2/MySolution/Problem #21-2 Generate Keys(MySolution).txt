@@ -1,0 +1,487 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+
+// Problem #21/2 Generate Keys
+
+/*
+
+Write a program to Read how many keys to 
+ generate and print them on screen.
+ 
+ Input:
+ 5
+ 
+ Output:
+   Key[1]: ETAI-HJUV-PEIP-CFRX
+   Key[2]: UMCO-YSQI-XSDF-YILK
+   Key[3]: ETAI-ZXEY-PEIP-CAWC
+   Key[4]: UPGH-AHLT-FGLD-ZXCR
+   Key[5]: ASCR-AWBN-MNHA-OPGW
+*/
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std; 
+
+int RandomNumber(int From, int To)
+{
+	// Function to generate a random number
+	int randNum = rand() % (To - From + 1) + From;
+
+	return randNum;
+}
+
+enum enCharType { SmallLetter = 1, CapitalLetter = 2, SpecialCharacter = 3, Digit = 4 };
+
+char GetRandomCharacter(enCharType Chartype)
+{
+	switch (Chartype)
+
+	{
+
+	case enCharType::SmallLetter:
+	{
+		return char(RandomNumber(97, 122));
+
+	}
+		
+	case enCharType::CapitalLetter:
+	{
+		return char(RandomNumber(65, 90));
+		
+	}
+		
+	case enCharType::SpecialCharacter:
+	{
+		return char(RandomNumber(33, 47));
+		
+	}
+		
+	case enCharType::Digit:
+	{
+		return char(RandomNumber(48, 57));
+		
+	}
+
+	}
+}
+
+void PrintKeyQuantityAndWord(int Key)
+{
+	cout << "Enter the Key Number to be printed\n";
+	cin >> Key;
+
+	for (int i = 1; i <= Key; i++)
+	{
+		cout << "Key[" << i << "]:";
+
+		for (int j = 0; j < 4; j++)
+		{
+			cout << GetRandomCharacter(enCharType::CapitalLetter);
+			cout << GetRandomCharacter(enCharType::CapitalLetter);
+			cout << GetRandomCharacter(enCharType::CapitalLetter);
+			cout << GetRandomCharacter(enCharType::CapitalLetter);
+
+			if (j < 3)
+			{
+				cout << '-';
+			}
+			
+		}
+
+		
+
+		cout << "\n";
+	}
+}
+
+int main()
+{
+	//Seeds the random number generator in C++, called only once    
+	srand((unsigned)time(NULL));     
+
+	int Key = 0;
+
+	PrintKeyQuantityAndWord(Key);
+	
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+//Problem 32 Power of M
+//Lesson #26 - Math Functions in C++
+//after finding the result use round and print the final results
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int Number, M;
+
+    cout << "Enter the number\n";
+    cin >> Number >> M;
+
+    Number = pow(Number, M);
+
+    cout <<"\nOutput:" << "\n" << round(Number) << "\n";
+
+    return 0;
+
+}
+
+

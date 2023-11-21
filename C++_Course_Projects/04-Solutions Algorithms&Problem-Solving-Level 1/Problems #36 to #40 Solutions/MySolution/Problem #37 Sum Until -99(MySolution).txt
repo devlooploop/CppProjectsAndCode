@@ -1,0 +1,183 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #36 to #40 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #37 Sum until -99
+
+/* Write a program to read numbers from user and sum them,
+keep reading until the user enters -99 then print
+the Sum on screen.
+Input
+10
+20
+30
+40
+-99
+Outputs:
+100
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int ReadN(string Message)
+{
+    int N;
+
+    cout <<Message<< "\n";
+    cin >> N;
+    return N;
+}
+
+void SumNumbersUntilMinus99(int N)
+{
+    int Sum = 0;
+   
+    while (N != -99)
+    {
+        Sum = Sum + N;
+        cin >> N;
+    }
+
+    cout << "\n" << Sum;
+}
+
+int main()
+{
+    
+    int Number = ReadN("Please Enter Number\n");
+
+    SumNumbersUntilMinus99(Number);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

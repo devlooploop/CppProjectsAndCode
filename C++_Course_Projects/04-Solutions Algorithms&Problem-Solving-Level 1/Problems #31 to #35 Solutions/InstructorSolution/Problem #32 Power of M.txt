@@ -1,0 +1,157 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #31 to #35 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #32 Power of M
+
+/* Write a program to ask the user to enter:
+• Number
+• M
+Then Print the Number^M
+Example Inputs:
+2
+4
+Outputs:
+16 */
+
+#include <iostream>
+
+using namespace std;
+
+int ReadNumber()
+{
+    int Number;
+
+    cout << "Please enter a number? " << endl;
+    cin >> Number;
+    
+    return Number;
+}
+
+int ReadPower()
+{
+    int Number;
+
+    cout << "Please enter a Power? " << endl;
+    cin >> Number;
+
+    return Number;
+
+}
+
+int PowerOfM(int Number, int M)
+{
+
+    if (M == 0)
+    {
+        // Any number powered to zero gives 1;
+        return 1;
+    }
+
+    int  P = 1;
+   
+    for (int i = 1; i <= M; i++)
+    {
+        P = P * Number;
+    }   
+    
+    return P;
+   
+}
+
+int main()
+{
+    // if you enter 2^99 returns 0 is wrong due to not enough 
+    // memory even though with bigger data type
+    
+    // Here the ReadPower() excuted first because call stuck reads/excutes 
+    //  from right to left & it depends on the compiler too in this matter.
+
+    cout << endl << "Result = " << PowerOfM(ReadNumber(), ReadPower());
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

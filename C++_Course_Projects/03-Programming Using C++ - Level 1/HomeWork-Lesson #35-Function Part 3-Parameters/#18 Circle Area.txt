@@ -1,0 +1,27 @@
+// Lesson #35 - Function Part 3 - Parameters
+// #018 Circle Area
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double CircleArea(double r) {
+	
+	double PI = 3.14;
+
+	return PI * (r * r);
+}
+
+int main() {
+
+	double r;
+
+cout << "Enter radius value:\n";
+cin >> r;
+
+cout <<endl<< CircleArea(r);
+
+return 0;
+
+}

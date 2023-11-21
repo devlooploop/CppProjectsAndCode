@@ -1,0 +1,97 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #47 - For Loops
+// Home Work From Lesson #41 - Arrays of Structure
+// Procedure reads info of 1 person and another 
+// procedure prints another person's info (Procedure inside another procedure)
+
+// just modify on Read and Print info functions!
+// Define the array with index max 100 like so Arr[100]
+
+// in ReadInfo() if the user enters 5 ArryPersons or more put the ArryPersons inside a
+//** for loop** same with PrintInfo(), Don't modify any otherpart of the program!
+
+// Write a program using Array, structures and Functions for N Persons
+// to do following!! see Lesson #48 video
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct strInfo
+{
+    string FirstName;
+    string LastName;
+    int Age;
+    string Phone;
+};
+
+
+void ReadInfo(strInfo& Info)
+{
+
+    cout << "Please enter FirstName?\n";
+    cin >> Info.FirstName;
+
+    cout << "Please enter LastName?\n";
+    cin >> Info.LastName;
+
+    cout << "Please enter Age?\n";
+    cin >> Info.Age;
+
+    cout << "Please enter Phone?\n";
+    cin >> Info.Phone;
+    cout << "****************************\n";
+
+}
+
+void PrintInfo(strInfo Info)
+{
+
+    cout << "\n**********************************\n";
+
+    cout << "FirstName: " << Info.FirstName << endl;
+    cout << "LastName: " << Info.LastName << endl;
+    cout << "Age: " << Info.Age << endl;
+    cout << "Phone: " << Info.Phone << endl;
+
+}
+
+void ReadArryPersonsInfo(strInfo ArryPersons[100], int& NumberOfPersons)
+{
+
+    cout << "Enter the number of Persons 1-100: \n";
+    cin >> NumberOfPersons;
+
+    for (int i = 0; i <= NumberOfPersons - 1; i++)
+    {
+        cout << "Enter Persons' " << i + 1 <<" Info " << endl;
+        cout << "--------------------------\n";
+        ReadInfo(ArryPersons[i + 1]);
+
+    }
+}
+
+void PrintArryPersonsInfo(strInfo ArryPersons[100], int NumberOfPersons)
+{
+    for (int i = 0; i <= NumberOfPersons - 1; i++)
+    {
+
+        cout << "\nPerson " << i + 1 << " Info";
+        PrintInfo(ArryPersons[i + 1]);
+
+    }
+
+}
+
+
+int main()
+{
+    int NumberOfPersons = 0;
+    strInfo ArryPersons[100];
+
+    ReadArryPersonsInfo(ArryPersons, NumberOfPersons);
+    PrintArryPersonsInfo(ArryPersons, NumberOfPersons);
+
+    return 0;
+}

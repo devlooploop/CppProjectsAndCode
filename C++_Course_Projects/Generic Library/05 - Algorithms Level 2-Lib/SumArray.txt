@@ -1,0 +1,14 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #26/2 Sum of random array.
+
+int SumArray(int arr[100], int arrLength)
+{
+	int Sum = 0;
+    
+	for (int i = 0; i < arrLength; i++)
+	{
+		Sum += arr[i];
+			
+	}
+	return Sum;
+}

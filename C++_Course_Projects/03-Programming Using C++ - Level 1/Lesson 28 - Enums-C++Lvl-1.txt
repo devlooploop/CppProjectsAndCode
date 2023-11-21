@@ -1,0 +1,75 @@
+// Lesson 28 - Enums- C++ LVL1
+
+
+#include<iostream>
+
+using namespace std;
+
+enum Marital_status {Married=1, Single};
+enum Salary {monthly = 5000, yearly = 60000};
+enum Age {age = 44};
+enum EnumContactInfo { phoneNumber = 1009238459 };
+enum Gender {Male=1, Female};
+enum Color {green, red, black, blue};
+
+struct ID {
+    string name;
+    char gender;
+   // bool Married = true;
+
+};
+
+struct Address {
+    string City;
+    string country;
+};
+
+struct ContactInfo {
+    string E_mail;
+    Address st_adress;
+    string socialMedia;
+};
+
+struct Income {
+    float MonthlySalary = 5000;
+    float YearlySalary = 60000;
+};
+
+struct Person {
+    ID st_ID;
+    ContactInfo st_ContactInfo;
+    Address st_address;
+    Income st_income;
+};
+
+int main()
+{
+
+    Person alisha, alikhan, Mari;
+    Color favoriteColor;
+ 
+
+    alisha.st_ID.name = "Alisha Malik";
+    alisha.st_address.City = "Roma";
+    alisha.st_address.country = "Italia";
+    alisha.st_ContactInfo.E_mail = "Myemail.gmail.com";
+    alisha.st_ContactInfo.socialMedia = "Instagram";
+    favoriteColor = Color::red;
+
+    cout << "\n" << "*******************************************************************************************" << endl;
+
+    cout << "Name: " << alisha.st_ID.name << "\n" << "Age: " << Age::age << "\n" << "City: " << alisha.st_address.City << "\n";
+
+    cout << "Country: " << alisha.st_address.country << "\n" << "Monthly Salary: "
+        << Salary::monthly << "\n" << "Yearly Salary: " << Salary::yearly << "\n";
+
+    cout << "Gender: " << Gender::Male << "\n" << "Married: " << Marital_status::Married << "\n" <<
+        "Phone Number: " << EnumContactInfo::phoneNumber ;
+        cout << "\n" << "Contact Info: " << alisha.st_ContactInfo.socialMedia << "\n" << "Favorite Color: " << favoriteColor << "\n";
+
+    cout << "\n" << "*******************************************************************************************" << endl;
+
+
+    return 0;
+
+}

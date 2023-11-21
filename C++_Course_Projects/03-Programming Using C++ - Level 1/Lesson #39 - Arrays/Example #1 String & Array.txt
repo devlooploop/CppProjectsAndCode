@@ -1,0 +1,24 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #39 - Arrays
+
+// Example #1 String & Array
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    // String is an array of characters
+
+    string x = "Mohammed Abu-Hadhoud";
+
+    cout << x[0] << endl; // Prints M 
+    cout << x[2] << endl; // Prints h
+    cout << x[7] << endl; // Prints d
+
+    return 0;
+}
+
+

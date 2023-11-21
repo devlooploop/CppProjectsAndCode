@@ -1,0 +1,226 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #41 to #45 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #41 Weeks and Days
+
+/*
+Write a Program to read a NumberOfHours and Calculates the number of weeks, and days included in that
+number
+Input
+365
+Outputs:
+2.17 Weeks
+15.20 Days
+*/
+
+#include <iostream>
+
+using namespace std;
+
+float ReadNumberOfHours(string Message)
+{
+    int Hours;
+	cout << Message;
+	cin >> Hours;
+
+    return Hours;
+}
+
+float CalculateWeeks(float Hours)
+{
+ 
+  float Day = (float) Hours / 24;
+
+    return Day;
+}
+
+float CalculateDays(float Hours)
+{
+    
+    float Day = (float)Hours / 24;  
+
+    float Week = (float)Day / 7;
+
+    return Week;
+
+}
+
+int main() {
+    
+    float z = ReadNumberOfHours("Please Enter the hours amount\n");
+
+    cout << "Days: " << CalculateDays(z);
+    cout << "\nWeeks: " << CalculateWeeks(z);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

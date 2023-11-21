@@ -1,0 +1,260 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #41 to #45 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #42 Task Duration in Seconds 
+
+/*
+Write a program to calculate the task duration in seconds and print it on screen
+ Given the time duration of a task in the number of days, hours, minutes, and seconds,.
+Input:
+2
+5
+45
+35
+Outputs:
+193,535 Seconds
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void ReadPositiveTaskDuration(string Message, float &Days, float& Hours, 
+	float& Minutes, float& Seconds)
+{
+	cout << Message;
+
+	cin >> Days
+		>> Hours
+		>> Minutes
+		>> Seconds;
+}
+
+float DaysToSeconds(float Days)
+{
+	return Days * 24 * 60 * 60;
+}
+
+float HoursToSeconds(float Hours)
+{
+	return Hours * 60 * 60;
+}
+
+float MinutesToSeconds(float Minutes)
+{
+	return Minutes * 60;
+}
+
+float Seconds(float Seconds)
+{
+	return Seconds;
+}
+
+float CalculateTotallSeconds(float Days, float Hours, float Minutes, float Second)
+{
+	
+	return DaysToSeconds(Days) + HoursToSeconds(Hours) + 
+		MinutesToSeconds(Minutes) + Seconds(Second);
+}
+
+int main()
+{
+	float Days = 0, Hours = 0, Minutes = 0, Second = 0;
+	
+	ReadPositiveTaskDuration("Enter the Task Duration in Seconds\n", Days, Hours, Minutes, Second);
+	
+	cout << CalculateTotallSeconds( Days, Hours, Minutes, Second) << " Seconeds ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

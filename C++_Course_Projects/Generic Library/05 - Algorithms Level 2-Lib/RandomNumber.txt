@@ -1,0 +1,15 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #19-2 Random 3 Number from 1 to 10
+
+int RandomNumber(int From, int To) 
+{ 
+
+//Function to generate a random number
+int randNum = rand() % (To - From + 1) + From; 
+return randNum; 
+
+} 
+
+// Use this in main()
+//Seeds the random number generator in C++, called only once    
+	srand((unsigned)time(NULL));     

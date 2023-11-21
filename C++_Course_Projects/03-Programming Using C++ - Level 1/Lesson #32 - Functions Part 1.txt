@@ -1,0 +1,52 @@
+// Lesson #32 - Functions Part 1
+#include <iostream>
+
+using namespace std;
+
+void FuncInfoCard(){
+
+    cout << "********************************" << endl;
+    cout << "Name : Abbas Abbosi" << endl;
+    cout << "Age  : 44 Years." << endl;
+    cout << "City : Amman." << endl;
+    cout << "Country: Jordan." << endl;
+    cout << "********************************" << endl;
+}
+
+void PrintSqrStars() {
+    cout <<"\n" << "********" << endl;
+    cout << "********" << endl;
+    cout << "********" << endl;
+    cout << "********" << endl;
+    
+}
+
+void PrintaboutProgramming() {
+    cout << "\n" << "I Love Programming!" << endl;
+    cout << "I Promise to be the best developer ever!" << endl;
+    cout << "I know it will take some time to practice, but I will achive my goal!" << endl;
+    cout << "Best Regrads,\n Abosi Avas";
+}
+
+void PrintH() {
+    cout << "\n\n";
+    cout << "*      *\n";
+    cout << "*      *\n";
+    cout << "*      *\n";
+    cout << "********\n";
+    cout << "*      *\n";
+    cout << "*      *\n";
+    cout << "*      *\n";
+}
+
+
+int main()
+{
+    FuncInfoCard();
+    PrintSqrStars();
+    PrintaboutProgramming();
+    PrintH();
+
+
+    return 0;
+}

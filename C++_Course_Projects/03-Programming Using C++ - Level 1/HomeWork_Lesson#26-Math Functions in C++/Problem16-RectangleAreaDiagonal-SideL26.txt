@@ -1,0 +1,21 @@
+// Problem16-RectangleAreaDiagonal-SideL26.cpp 
+//Lesson #26 - Math Functions in C++
+// #16: use pow inside sqrt
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    float a, d, Area;
+    
+    cout << "Enter side and diagonal value:\n";
+    cin >> a;
+    cin >> d;
+
+    Area = a * sqrt(pow(d, 2) - pow(a, 2));
+    cout << Area<< "\n";
+
+    return 0;
+}
+

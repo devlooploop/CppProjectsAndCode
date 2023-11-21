@@ -1,0 +1,62 @@
+// Course - 04- Solutions - Algorithms&Problem-Solving-Level 1 
+// Problem #1 to #5 Solutions
+// 
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// 
+// Problem #4 Hire a Driver Case1
+
+/*
+Write a program to ask the user to enter his/her:
+• Age
+• Driver license
+Then Print “Hired” if his\her age is grater than 21 and s/he
+has a driver license, otherwise Print “Rejected”
+*/
+
+#include <iostream>
+using namespace std;
+
+
+int ReadAge(int &Age)
+{
+    cout << "Enter your Age\n";
+    cin >> Age;
+
+    return Age;
+}
+
+char ReadDriverLicence(char &DriverLicense)
+{
+    cout << "Do you have Driver License y/n\n";
+    cin >> DriverLicense;
+
+    return DriverLicense;
+}
+
+string CheckAgeAndDriverLicense()
+{
+    int Age;
+    char DriverLicense;
+
+    ReadAge(Age);
+    ReadDriverLicence(DriverLicense);
+
+    if  ((Age > 21) && (DriverLicense == 'y') || (DriverLicense == 'Y'))
+    {
+        return "\n\"Hired\"";
+    }
+    else
+    {
+        return "\n\"Rejected\"";
+    }
+
+}
+
+
+int main()
+{
+    
+  cout <<  CheckAgeAndDriverLicense();
+
+    return 0;
+}

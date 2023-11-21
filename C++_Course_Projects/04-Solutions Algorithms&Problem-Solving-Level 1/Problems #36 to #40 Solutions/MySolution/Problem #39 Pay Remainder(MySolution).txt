@@ -1,0 +1,42 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #36 to #40 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #39 Pay Remainder
+
+/*
+Write a program to read a TotalBill and CashPaid and calculate the remainder to be paid back.
+Input
+20
+50
+Outputs:
+30
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void ReadCashPaid(string Message, float &CashPaid, float &TotalBill)
+{
+	cout << Message;
+	cin >> CashPaid;
+	cin >> TotalBill; 
+}
+
+float CalculateReminder(float CashPaid, float TotalBill)
+{
+	return TotalBill - CashPaid ;
+}
+
+int main()
+{
+	float CashPaid = 0, TotalBill = 0;
+
+	ReadCashPaid("Enter total bill and cash paid: \n", CashPaid, TotalBill);
+
+	cout << "The reminder is " << CalculateReminder(CashPaid, TotalBill);
+
+}

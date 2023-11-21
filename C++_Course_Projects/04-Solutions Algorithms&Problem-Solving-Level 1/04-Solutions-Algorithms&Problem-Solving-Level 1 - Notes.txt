@@ -1,0 +1,376 @@
+04-Solutions- Algorithms&Problem-Solving-Level 1 Notes
+-------------------------------------------------------
+
+// Use Procedures and Functions , struct .... etc in all the solutions
+
+
+Problem #1 Print Name on Screen
+Problem #2 Read  Name and Print it
+Problem #3 Read  Number from user and check  Odd or Even
+Problem #4 Hire a Driver Case1
+
+-------- Problem #3 ----
+
+// PrintNumberType(CheckNumberType(ReadNumber()));
+	takes enum as parameter and checks if Even or Odd
+	
+// In checkNumberType function we gave it user defined data type " enNumberType"
+
+-------------------------- Problem #4 Hire a Driver Case#1 ----
+
+// In this problem we gathered all the related variables in 
+    a struct stInfo() and we read and write from the function stInfo  ReadInfo()
+     
+     stInfo  ReadInfo()
+     {
+        stInfo Info;
+        
+        cout << "Please Enter your Age?" << endl;
+        cin >> Info.Age;
+        // rest of the code
+        
+        return Info;   // Here Info HAS 2 Variables of type struct !!!!
+    }
+    
+
+// Super important "return" returns the result ready !!!! 
+bool  IsAccepted(stInfo Info)
+{
+    return (Info.Age > 21 && Info.HasDrivingLicense);  
+} 
+   
+
+// Here we pass the "IsAccepted(Info)" function to the "if()" will compare and print the result !!!!
+void PrintResult(stInfo Info)
+{
+    if (IsAccepted(Info))
+    {
+        cout << "\nHired";
+    }
+    else
+    {
+        cout << "\n Rejected";
+       
+    }
+
+ -------------------------- Problem #5 Hire a Driver Case#2 ----
+ 
+ // In this function the "if" passed "Info.HasRecommendation" directly there is no need to say 
+	if (Info.HasRecommendation == true) !!!!
+ 
+ bool IsAccepted(stInfo Info)
+{
+    if (Info.HasRecommendation)
+    {
+        true;
+    }
+    else
+    {
+      return (Info.Age > 21 && Info.HasDrivingLicense);
+
+    }
+}
+ 
+ 
+------------------- Problem #6 to #10 Solutions -----------
+ 
+ 
+ // Allways read function structer type in struct type like 
+
+stInfo read(){}
+
+// in "if() ... or if() else" if there is only one line of code there 
+	is no need to put curly brackets {} !!!
+	
+
+// Here to print Reversed Full Name we pass "true" to PrintFullName();
+string GetFullName(stInfo Info, bool Reversed)
+{
+    string FullName = "";
+
+    if (Reversed)
+        FullName = Info.LastName + " " + Info.FirstName;
+    else
+        FullName = Info.FirstName + " " + Info.LastName;
+
+    return FullName;
+}
+
+// Passed true as parameter to get Reversed FullName
+ PrintFullName(GetFullName(ReadInfo(),true));
+	
+
+------------------------------ Problem #7 to #10 Solutions - Half Number -------------
+	 
+// In the result we get 
+Half of 7 is 3.500000   
+
+//the Zero because we used to_string function
+
+void  PrintResults(int Num)
+{
+   
+    string Result = "Half of " + to_string(Num) + " is " + to_string(CalculateHalfNumber(Num));
+    cout << endl << Result << endl;
+}
+
+----------------- Problem #8 to #10 Solutions ----
+
+// We used enum as data type for easier and more optimized code 
+
+enum enPassFail { Pass = 1, Fail = 2 };
+
+----------------- Problem #9 to #10 Solutions -------------
+
+// Remember reusability of the function like ezample below:
+
+
+float CalculateAverage(int Mark1, int Mark2, int Mark3)
+{
+
+    return (float)SumOf3Marks(Mark1, Mark2, Mark3) / 3;  //reusability used here
+}
+
+----------------- Problem #10 to #10 Solutions -------------
+
+Problem #10 - Average of 3 Marks  Done !!!
+
+------------- Problem #11 to #15 Solutions ---------------
+
+// Problem #11 Average Pass Fail
+
+// The only new thing in this problem is the function bellow:
+
+enPassFail CheckAverage(float Average)
+{
+    if(Average >= 50)
+        return enPassFail::Pass;
+    else
+        return enPassFail::Fail;
+}
+
+------------- Problem #12 to #15 Solutions ---------------
+
+// Problem #12 Max of two Numbers
+
+------------- Problem #13 to #15 Solutions ---------------
+
+// Problem #13 Max of three Numbers
+
+------------ Problem #14 to #15 Solutions ---------------
+
+// Problem #14 Swap Numbers
+
+------------ Problem #15 to #15 Solutions ---------------
+
+// Problem #15 Rectangle Area
+
+// passed parameter by reference
+void Swap(int &A, int &B){....}
+
+----------- Problems #16 to #20 Solutions -----------------
+
+// Problems #16 
+
+----------- Problems #17 to #20 Solutions -----------------
+// Problem #17 Triangle Area
+
+------------- Problems #18 to #20 Solutions -----------------
+
+// Problem #18 Circle Area
+
+// PI defined as const because its value is fixed and can't be 
+    changed through the program
+
+-------------------- Problems #19 to #20 Solutions -----------------
+//Problem #19 Circle Of Area Diameter
+
+//  const float PI = 3.141592653589793238;
+
+-------------------- Problems #20 to #20 Solutions -----------------
+
+// Problem #20 Circle Inscribed Square 
+
+------- Problems #21 to #25 Solutions  ----------------------
+
+//Problem #21 Circle Area Circumference
+
+------------- Problems #22 to #25 Solutions  -----------------------
+
+// Problem #22 Circle Area Inscribed in an Isosceles Triangle
+
+// I for Isosceles in the  CircleAreaByITriangle(float a, float b) function
+
+------------- Problems #23 to #25 Solutions  -----------------------
+
+//Problem #23 Circle Area circle Described Around an Arbitrary Triangle
+
+------------- Problems #24 to #25 Solutions  -----------------------
+
+// Validate Age Between 18 and 45
+
+------------- Problems #25 to #25 Solutions  -----------------------
+
+// Problem #25 Read Until Age Btween 18 and 45
+
+----------- Problems #26 to #30 Solutions -------------
+
+// #26 Print Numbers from 1 to N (Using For - While - Do-While loop)
+
+// The best solution is For loop - due to that we know how may counts !
+
+----------- Problems #27 to #30 Solutions -------------
+
+// Problem #27 Print Numbers from N to 1
+
+----------- Problems #28 to #30 Solutions -------------
+
+// Used enum with Check function to make it generic for other uses if needed!!
+
+enum enOddOrEven { Odd = 1, Even = 2 };
+
+enOddOrEven CheckOddOrEven(int Nunmber)
+{
+    if (Nunmber % 2 != 0)
+        return enOddOrEven::Odd;
+    else
+        return enOddOrEven::Even;
+}
+
+----------- Problems #29 to #30 Solutions -------------
+
+// Problem #29 Print Sum Even Numbers from 1 to N
+
+----------- Problems #30 to #30 Solutions -------------
+
+// Problem #30 Factorial of N
+
+--------- Problems #31 to #35 Solutions  --------------
+ //Problem #31 Power of 2,3,4
+ 
+------------ Problems #32 to #35 Solutions --------------
+
+// Problem #32 Power of M  
+// Here there is no need for else because the return in the function will get out !!!
+
+// PowerOfM(ReadNumber(),ReadPower());
+    
+    Here the Power prompted first "Please enter the power", 
+        because stuck call begins from right to left & it depends on the compiler too 
+        in this matter.
+
+// return in a function is like a break it'll get out of the function !!!! 
+
+------------ Problems #33 to #35 Solutions --------------
+
+// Problem #33 Grade A,B,C,D
+
+------------ Problems #34 to #35 Solutions --------------
+
+// Problem #34 Comission Precentage
+
+------------ Problems #35 to #35 Solutions --------------
+
+// Problem #35 Piggy Bank Calculator
+
+------------ Problems #36 to #40 Solutions --------------
+
+// Problem #36 Simple Calculator
+ 
+// In this problem we didn't use break before case statemen, because it has return and  
+    return acts as break; exits the case statement1 !!! 
+    
+    Switch (OpType)
+    {
+        case enOperationType::Add:
+            return Number1 + Number2;   <------- Here we didnt use break; !!!!
+    }
+
+------------ Problems #37 to #40 Solutions --------------
+
+// Problem #37 Sum Until -99
+
+Used Break inside if to break out of the "Do...whie loop" !!!
+
+if (Number == -99)
+{
+    break;
+}
+
+------------ Problems #38 to #40 Solutions --------------
+
+// Problem #38 Is Prime Number
+
+// This is Optmized Solution !!! 
+
+enPrimNotPrime CheckPrime(int Number)
+{
+    // This is Optmized Solution by checking half of Numbers instead of all This is faster
+    int M = round(Number / 2);  
+
+    for (int Counter = 2; Counter <= M; Counter++)
+    {
+        if (Number % Counter == 0)
+            return enPrimNotPrime::NotPrime;
+    }
+
+    return enPrimNotPrime::Prime;
+} 
+
+------------ Problems #39 to #40 Solutions --------------
+
+// Problem #39 Pay Remainder
+
+--------- Problems #40 to #40 Solutions --------------
+
+// Problem #40 Service Fee and SalesTax
+
+------------- Problems #41 to #45 Solutions ------------
+
+// Problem #41 Weeks and Days
+
+------------- Problems #42 to #45 Solutions ------------
+
+// Problem #42 Task Duration in Seconds
+
+---------- Problems #43 to #46 Solutions ------------
+
+// Problem #43 Seconds to Days Hours Minutes Seconds
+
+// struct Used here
+
+---------- Problems #44 to #46 Solutions ------------
+
+// Problem #44 Day of Week
+
+In (MySolution) break; statement removed because there is return in the case: and return takes 
+    act as break, it breaks out of the case statement !!!
+    
+---------- Problems #45 to #46 Solutions ------------
+
+// Problem #45 Month Of Year
+
+---------- Problems #46 to #50 Solutions ------------
+
+// Problem #46 Print Letters from A to Z
+
+---------- Problems #47 to #50 Solutions ------------
+
+// Problem #47 Loan Instalment Months
+
+---------- Problems #48 to #50 Solutions ------------
+
+// Problem #48 Monthly Loan Installment
+
+---------- Problems #49 to #50 Solutions ------------
+
+// Problem #49 ATM PIN
+
+---------- Problems #50 to #50 Solutions ------------
+
+// Problem #50 ATM 3 Times
+
+// inside the while loop  if we use "break" it will show also the message "Card is locked!",
+    so thats why we used return to go out of the procedure  "CheckPINCode(string PIN);"
+
+**************************** End Of The Course ****************************

@@ -1,0 +1,7 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #27/2 Average of random array.
+
+float ArrayAverage(int arr[100], int arrLength) 
+{ 
+	return  (float)SumArray(arr, arrLength) / arrLength; 
+}

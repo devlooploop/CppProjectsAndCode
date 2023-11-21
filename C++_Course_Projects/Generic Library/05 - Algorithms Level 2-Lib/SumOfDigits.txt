@@ -1,0 +1,16 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #06/2 Sum Of Digits
+
+int SumOfDigits(int Number)
+{
+	int  Remainder = 0, Sum = 0;
+
+	while (Number > 0)
+	{
+		Remainder = Number % 10;
+		Number = Number / 10;
+
+		Sum = Sum + Remainder;
+	}
+	return Sum;
+}

@@ -1,0 +1,27 @@
+//Problem 31 Power of 2,3,4
+//Lesson #26 - Math Functions in C++
+//after finding the result use round and print the final results
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int num, num2, num3, num4;
+
+    cout << "Enter a number\n";
+    cin >> num;
+
+    num2 = pow(num,2);
+    num3 = pow(num,3);
+    num4 = pow(num,4);
+
+    cout <<"\n Output:" << "\n" << round(num2) << "\n" << round(num3) << "\n" << round(num4) << "\n";
+
+    return 0;
+
+}
+
+

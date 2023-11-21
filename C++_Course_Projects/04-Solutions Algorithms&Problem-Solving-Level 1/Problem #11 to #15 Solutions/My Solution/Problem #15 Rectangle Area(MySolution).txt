@@ -1,0 +1,56 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problem #11 to #15 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+
+// From Algorthim and Problem Solving 
+// Problem #15 Rectangle Area
+
+/*
+Write a program to calculate rectangle area and print it on the screen.
+Example Inputs:
+10
+20
+Outputs:
+200
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void ReadValue(float &A, float &B)
+{
+    cout << "Enter the A and B value\n";
+    cin >> A;
+    cin >> B;
+}
+
+float CalculateRectangelArea(float A,float B)
+{
+
+    return A * B;
+}
+
+void PrintArea(float Area)
+{
+    cout << Area;
+}
+
+int main()
+{
+    float A, B;
+    ReadValue(A, B);
+    PrintArea(CalculateRectangelArea(A,B));
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+

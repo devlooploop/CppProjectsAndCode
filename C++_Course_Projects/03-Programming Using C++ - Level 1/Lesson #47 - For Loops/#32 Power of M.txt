@@ -1,0 +1,43 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #47 - For Loops
+//Problem #32 Power of M
+
+/* Write a program to ask the user to enter:
+• Number
+• M
+Then Print the Number^M
+Example Inputs:
+2
+4
+Outputs:
+16 */
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // if you enter 2^99 returns 0 is wrong due to not enough memory even though with bigger data type
+    int Num, M, P = 1;
+
+    cout << "Enter the number\n";
+    cin >> Num;
+    cout << "Enter the M\n";
+    cin >> M;
+
+    if (M != 0)
+    {
+        for (int i = 0; i != M; i++)
+
+            P = P * Num;
+    }
+
+    cout << "\nOutput:" << "\n" << P << "\n";
+
+    return 0;
+
+}
+
+
+

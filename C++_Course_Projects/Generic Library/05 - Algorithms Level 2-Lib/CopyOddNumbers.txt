@@ -1,0 +1,13 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #38-2 Copy Odd Numbers to a new Array
+
+
+void CopyOddNumbers(int arrSource[100], int arrDestination[100], int arrLength, int &arrDestinationLength)
+{
+	for (int i = 0; i < arrLength; i++)
+		if (arrSource[i] % 2 != 0)
+		{
+			AddArrayElement(arrSource[i], arrDestination, arrDestinationLength);
+		}
+
+}

@@ -1,0 +1,37 @@
+// Introduction to Programming Using C++ - Level 1
+// Lesson #20 - Arithmetic Operators
+// 
+// From Algorthim and Problem Solving 
+// Problem #15 Rectangle Area
+
+/*
+Write a program to calculate rectangle area and print it on the screen.
+Example Inputs:
+10
+20
+Outputs:
+200
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	float area, a, b;
+
+	cin >> a;
+	cin >> b;
+
+	area = a * b;
+
+	cout << "\n" << area;
+
+	return 0;
+
+}
+
+
+
+

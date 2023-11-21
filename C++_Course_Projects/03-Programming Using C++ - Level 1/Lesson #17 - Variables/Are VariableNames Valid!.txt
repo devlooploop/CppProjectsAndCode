@@ -1,0 +1,17 @@
+Age ---Valid
+My-Age ---- Variable names in C++ cannot contain hyphens or other special characters
+My_Age --- Valid
+
+_Age --- Valid
+2x  --- you can't declare a variable or use an identifier that starts with a number.
+X2  -- Valid
+
+My Name  --- It has space int it NOT VALID
+MyName   --- VALID
+#Name	 --- Not Valid starts with a non-letter character (# ), it is not a valid identifier in C++
+
+$Name    --- Not valid and it's not encourged to use special charachters
+N@me	 --- unrecognized token	because it has special charachter in it
+
+int 	 ---  Not Valid  is a reserved keyword in C++ used to declare variables of type int
+float	 ---  "float" is a reserved keyword in C++ used to declare variables of type float

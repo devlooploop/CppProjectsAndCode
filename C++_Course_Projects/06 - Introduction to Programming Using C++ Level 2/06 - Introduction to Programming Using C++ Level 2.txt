@@ -1,0 +1,806 @@
+----------- 06 - Introduction to Programming Using C++ Level 2 ------------------
+
+Start 30/10/2023
+ 
+
+-------------- Lesson #1 - What is Debugging & Why? ---------------
+
+--> START Debugging C++ Code 
+
+3 types of errors: 
+------------------
+1- Syntax : when foregt a semicolon, wrong function name....etc.
+  
+2- Run time error : cause crash to the application.
+
+3- Logical error: Programmer make mistakes & it's hard to find.
+
+// You go through the code line by line and in debugging mode you can see the variable's value in the memory
+
+------------------------------------------------------------------------------
+---------------------- Lesson #02 - Breakpoint & Memory Values ------------
+
+- Make sure to chose Debug mode (it's slower to run the program) 
+- Debug mode only for developing and to be able go throuh the code line by line and 
+	see the variabls' values.
+- Release Mode : when you done with developing you can chose Release so the run 
+	time and compilation would be faster.
+
+- Red break point : when program reachs the red point it will stop until you tell it otherwise. 
+
+- If you dont give a variable initial value like x = 0; it will show rubbish value 
+	which causes probles in your source code.
+
+- F11 -Step into : Excutes the program line by line.
+
+------------------------------------------------------------------------------
+-------------------  Lesson #03 - More about Breakpoints  -----------
+
+- Don't put break point on empty line because compiler will stop at that point at Run Time.
+
+// If there is two break points and yo don't wanna go through all the lines for example in
+	for loop just press F5 or Run so it will skip the lines and will go to 2nd break point.
+	
+- You can move the Yellow arrow whereever you want to start the debugging from that point.
+
+- To Disable/Enable all break points --> Debug --> Disable/Enable all break points.
+
+- To delete all break points --> Debug --> Delete all break points.
+
+------------------------------------------------------------------------------
+------------ Lesson #04 - Autos Window --------
+
+-When you run the program it will appear down under the Visual Studio, it will 
+	show variables and local variables instead of hover the muse over them.
+	
+Debug > Windows > Autos, or press Ctrl+Alt+D > W > A
+
+------------------------------------------------------------------------------
+----------- Lesson #05 - Quick Watch Window ---------------
+
+Quick Watch Window : It's customized auto window means you can add 
+	the variabls you want to the window. 
+
+- To add to the Quick Watch Window expression or variables, 
+	set a break point > run > highlight the variables > press Shift+F9, or right-click and select QuickWatch > Then Add Watch 
+	then you will see i at the auto window
+	
+- When in Quick Watch Window you can choose the > Reevaluate 
+	it show you the result after evaluation of the expression.
+
+- You can watch and evaluate array, variables, expression ... etc.
+
+- To see array int arr1[5] = { 200,100,50,25,30 }; 
+		hilight arr1 > QuickWatch
+
+
+------------------------------------------------------------------------------
+------------- Lesson #06 - Changing Values in Debugging Mode  --------
+
+- Variable's value can be changed in Debugging mode at "Run Time" > Hver mouse over the variable
+	then change the value, with that you don't need to reRun the program again.
+
+- You can do the same at  "Watch Window" or "Autos Window".
+
+
+------------------------------------------------------------------------------
+------------- Lesson #07 - Step Into/Over/Out ---------
+
+END ---> Debugging C++ Code
+
+- F10 Step Over : Excutes the line without getting in the details, like in function will 
+	excutes it withou get in the function's details.
+
+
+---------------------------------------------------------------------------------
+--------------  Lesson #08 - Library: Create Your Own Library  ---------------
+
+----> START Miscellaneous
+
+- You can put in a library Functions & Procedures under namespace !!!!
+
+!! Avoid using "using namespace MyLib;" alot because it'll cause confict in function names from 
+	diffrent libraries. use instead > std::(Name Of Function);
+
+- Library : used for reusability of the code, makes it faster to for you as a developer.
+
+- Makes your code lighter and easy to read & fix.
+
+- Locally means you can use only in the current project!!!
+
+- Put all Functions that is alike or has similar function under a Library so it will be easier 
+	for you to get them  , Read/Input, Print .... etc .
+
+// Make lib locally:
+
+> View > Solution Explorer > Header Files > Right Mouse Click > Add > Add New Item > MyLib.h(Name of your header)
+
+// #pragma once : Compiler Directive > Tells the compiler don't reload the Library/.h file every time.
+
+- Don't delete #pragma once line !!!!
+
+// You can put in the lib functions & Procedures, under catagories (Organaize them under a name) like 
+	the namespace. 
+
+- Inside MyLib(Your local library) the .h file :
+#include <iostream>
+using namespace std; (for the cout <<)
+
+namespace MyLib // Your local Library
+	//.... the rest of the code 
+	
+-- We use "" instead of <> when include a local Lib as #include "MyLib.h"
+
+- MyLib::Test(); // Calls func Test() from MyLib which is in / under namespace
+
+- If you need functions from another libraray, just include it > #include "MyInputLib" (2nd Lib we made).
+
+- To call a function dirctly without   (Library name)std:: > using namespace std;
+	Or using namespace MyLib; so you dont have to use 
+		MyLib::  to call a function from the library.
+
+*** It's not prefered to use using namespace LibName;
+			It may lead to errors and problems if you have same function name in two diffrent libraries.
+
+
+Home Work Make Library: (Your own Library made before)
+-----------------------
+// From now on Make & organize your own libraries!
+ 
+- Read Input
+- Math functions
+- Make  2 - 3 libraries.
+
+!! Put your libraray .h file in the main() file that has to do with the program  **
+
+
+--------------------------------------------------------------------------------------------
+----------------------  Lesson #09 - Ternary Operator: Short Hand IF -------------------
+
+- Syntax
+--------------------------------
+
+Condition ? expression1 : expression2;
+             (True)         (False)
+			 
+Ex
+---------
+
+int Mark = 90; 
+string result;  
+
+result = (Mark >= 50) ? "PASS" : "FAIL";  // We can use function instead of "PASS" : "FAIL";        
+cout << result << endl;
+
+You can also write it like :
+----------------------------
+
+ (Mark >= 50) ? cout << "PASS" : cout << "FAIL";
+ 
+- You can aslo make nested Ternary operator:
+ (Mark >= 50) ? cout << "PASS" : (Mark >= 50) ? cout << "PASS" : cout << "FAIL";
+ 
+ 
+------------------------------------------------------------------------------------
+--------------------- Lesson #10 - Ranged Loop ---------------------------------
+
+- Syntax
+--------------------------------
+for (rangeDeclaration : rangeExpression)
+{
+	// code
+}
+
+
+Ex:
+---------
+
+int Array1[] = {1,2,3,4};
+
+for (int n : Array1)  // rangeDeclaration (int n) data type must 
+							be the same as rangeExpression data type (int Array1[]).
+{							
+	cout << n << endl;
+}
+
+- Array : is a collection of items! the item has same data type as the "Array" / collection.
+
+- I the collection / Array is a structer then the items would be the same data type struct or ny data type.
+
+- It will bring collection's item "Array1" and put it in n !!!
+
+
+for (int n : Array1) 
+	(item  : collection)  (searchs in collection and bring the item from collection and put it in n/item)
+	
+- You can put the set {1,2,3,4} directly instead of the collection as:
+
+for (int n : {1,2,3,4})   
+							
+{							
+	cout << n << endl;
+}
+
+------------------------------------------------------------------------
+---------------------- Lesson #11 - Validate Number  ---------------
+
+- (cin.fail) // if the operation fails it returns true
+
+	while (cin.fail())     
+	{ 
+	// user didn't input a number    
+	cin.clear();      
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // put this line as it's will ignore all inputed 
+																		        line until the Enter "\n". 
+	cout << "Invalid Number, Enter a valid one:" << endl;         
+	cin >> Number;     
+	}
+
+----------------------------------------------------------------------------
+---------------------- Lesson #12 - Bitwise AND operator  ---------------
+
+- & : This is a Bitwise AND operator. (Converts the number into Binary)
+
+- && : This is a logical AND operator. (This results in True or Fals)
+
+
+Ex: Bitwise &
+-------------
+
+Bitwise & (12 & 25)? 
+
+// This will convert it to Binary then conduct 
+	Bitwise & on the Bin numbers bit by bit then convert it to Decimal.
+	
+12 = 00001100 (in Binary)
+25 = 00011001 (in Binary)
+
+Bit Operation of 12 and 25
+
+	 00001100
+   & 00011001
+   -------------
+     00001000 = 8 (in Decimal)
+	 
+
+
+
+Ex: && Logical AND
+------------------
+
+- A = True, B = True ---> (A && B) = True
+ 
+- A = 1, B = 0 -----> (A && B) = 0
+
+- Any Number is not Zero is true like (12 && 25) is Ture or 1
+
+
+----------------------------------------------------------------------------
+----------------------  Lesson #13 - Bitwise OR operator ---------------
+
+
+ - | : This is a Bitwise OR operator. (Converts the number into Binary)
+
+- || : This is a logical OR operator. (This results in True or Fals)
+
+
+Ex: Bitwise |
+-------------
+
+Bitwise OR (12 | 25)? 
+
+// This will convert it to Binary then conduct 
+	Bitwise | on the Bin numbers bit by bit then convert it to Decimal.
+	
+12 = 00001100 (in Binary)
+25 = 00011001 (in Binary)
+
+Bit Operation of 12 and 25
+
+	 00001100
+   | 00011001
+   -------------
+     00011101 = 29 (in Decimal)
+	 
+
+
+
+Ex: || Logical OR
+------------------
+
+- A = True, B = False ---> (A || B) = True
+ 
+- A = 1, B = 0 -----> (A || B) = 1
+
+- Any Number is not Zero is true like (12 || 25) is Ture or 1
+
+								
+					-------- End of Miscellaneous --------
+
+-------------------------------------------------------------------------------------------
+------------- Lesson #14 - Declaration Vs Definition----------------------------------------
+
+						----Start---More About Functions------
+						
+- Function body is a " function definition ".
+
+- Function "declaration" : is when you declare the function above main() so you 
+	can call it wherever from the program.
+	
+- Function should be defined before main() otherwise compiler will give error as 
+	it's not defined, but if you want to put the function under the main() 
+		function you have to declare it above the main():
+	
+// function declaration
+void add(int, int); 
+
+int main() 
+{     
+	add(10, 20); 
+	return 0; 
+} 
+
+// function Definition
+void add(int a, int b) 
+{     
+	cout << (a + b); 
+} 
+								
+- Benefit of " function declaration " is when you try to use/call functions anywhere in the 
+	program the compiler will recognize it.
+
+------------------------------------------------------------------------------------
+----------------- Lesson #15 - Default Parameters ---------------------------
+
+- Default : in programming means failur or optional parameter.
+
+- in the function bellow parameter c & d has default parameter it's vaue = 0, means if you dont give it a value
+	in main() or anywhere else it will give it's value Zero by default:-
+	
+int MySum(int a, int b, int c = 0, int d = 0)
+{
+	return  (a + b + c + d);
+}
+
+cout << MySum(10,20); // here compiler will not give it error because it has c, d 
+		as default parameter.
+
+----------------------------------------------------------------------------------
+------------------------ Lesson #16 - Function Overloading --------------------
+
+- Function Overloading : When there is more than one function and it has diffrent parameters, 
+	and you can give "same name" although they have diffrent parameters.
+
+- It's type of polymorphism.
+
+- Compiler will know the function from the fucntion signature means from "Number of parameter and it's data type".
+
+- When you call "overloaded function" from main(), Visual studio will give you options which one you wanna use. 
+	
+- Diffrent functions can have the " same function name / One function name ".
+
+- It's not allowed to have 2 functions with same name with same parameter's numbers :
+
+int MySum(int a, int b);
+int MySum(int x, int y);
+
+-------------------------------------------------------------------------------------
+-------------------------- Lesson #17 - Call Stack/Call Hierarchy -------------
+
+- There is Pop(remove) & Push (add) operations in call stack. 
+
+- Allways there will only one "Active frame" (the function that being excuted 
+	currently & memory will be focusd on & will allocte a place in a memory for it / the active function).
+
+- Stack : is the place in memory that store & excution happens.
+
+- in Stack : Last In - First out.(LIFO)
+- When call stack operation is done with the functions, it will do 
+	"PoP" to the function (will throw it out of the call stack).
+
+- Call Stack will check if the function4() is done printing "Hi I am ..." the it will PoP it as it's role is done,
+	then function4() inside  function3() is PoPed after being excuted .... etc.
+
+- once main() will be PoPed out of the call stack, call stack will be empty and program excution is done.
+
+- When call stack Push main() means Pushed or added first then , push other functions ... etc.
+
+- To see call "stack" or view " call hierarchy " in visual studio 
+		> right-click > view call hierarchy 
+	from there you know what fucntion called what other fucntion like main () called func1() ... etc.
+
+- Under " Call Heirarchy " window you see function calls all of that is call stack or " Call Heirarchy ".
+
+
+---------------------------------------------------------------------------------------------------------
+-------------------------- Lesson #18 - VS Function Tips ------------------------
+
+- Expand / hide the function's code from - + signe .
+
+- To find a function > right-click > go to definition or F12.
+- To find " fucntion Declaration " > right-click > go to Declaration.
+
+- " Find All References " : Will find where in the program the function mentioned or been called or located:
+		> Right - Click > Find All References.
+
+- Can also see or " Peek " definition instead of go to definition 
+	> right-click > Peek Definition. 
+	
+- To change a " function name " through out the program :
+	> right-click > Rename  then you can choose " search scoop > entire solution or project .... etc".
+	
+When " entire solution " choosed it will change / rename the function through all projects in that solution.
+
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------  Lesson #19 - Recursion ----------------------
+ 
+ - Recursion : is dangerious it will case "stack over flow", so you have to be sure that when 
+	used it wouldn't cause stack over flow, sepcially with big numbers and big loops, so in 
+	this case it's better to use loops like (for, while, do..while ).
+
+ - Recursion : Function call it self in a function call.
+ 
+ - It has advantages and many disadvantages, be very careful when you use it.
+ 
+ - PrintNumber(1, 999999);  in this case it wall caise "Stack Over Flow" because when you give 
+        recursion function big numbers it will call it self many times it leades to that 
+            "call stack" will flow and cause stack over flow.
+
+- C++'s stack has big capacity in memory but it's limited and can be over flowed.
+
+- Use "recursion" only when you are sure it will not cause stack over flow.
+
+- Python it's stack has small capacity.
+
+
+void PrintNumbersFromNtoM(int N, int M)
+{
+	if (N <= M)
+	{
+		cout << N << endl;
+		PrintNumbersFromNtoM(N + 1, M);
+	}
+	// 1/2 -Here when all excution inside "if" is done, "call stack" will check if there is 
+		any "instruction / code / function" here to be excuted then stack will begin "pop" the active
+		"frame/function". (it will go back to previous function and check if there is any thing 
+		to excute, first check then pop).
+}
+
+int main()
+{
+	PrintNumbersFromNtoM(1, 10);
+	
+//    2/2 -when main() is the last active frame in the call stack, stack
+		   will check if there is any thing here to excute
+		   it is "return 0", then will get out of the program (all done after return 0).
+	
+	return 0;
+}
+
+
+----------------------------------------------------------------------------------------------
+---------------------- Lesson #20 - Static Variables ---------------
+
+
+- static variable is like "global variable", life time of "static variable" it lives on 
+	as long as the project, but in the scope of the function.
+
+- A static variable is by default a global variable: 
+	stored neither in the stack nor the heap, it has the same lifespan as its program. But unlike a true global variable, it has a limited scope: inside a function, it's a global that's only visible inside the function in which we declare it.
+
+- Life time(lifespan) / scope of " int Number = 1;" (local variables), 
+	it will be destroyed after the "MyFunc()" is excuted.   
+
+- When "static variable" is defined it will be registered under the name of MyFunc(), 
+	it'll allocate a place in memory & will keep it's value as long as the program lives 
+	it will not be destroyed like local variable do.
+	
+
+void MyFunc() 
+{ 
+	static int Number = 1;    
+
+	cout << "Value of Number: " << Number << "\n";    
+	Number++; 
+}
+
+
+int main()
+{
+	MyFunc();    
+	MyFunc();    
+	MyFunc();
+
+	return 0;
+}
+
+---------------------------------------------------------------------------------
+--------------------- Lesson #21 - Automatic Variables ------------
+
+
+- Avoid using " Automatic Variables ".
+
+- When using "Automatic " as data type it'll automatically allocate capacity of that data type 
+	in memory as "int, float ..".
+	
+
+----------------------------------------------------------------------------
+----------------- Lesson #22 - Register Variable ---------------------
+
+
+- Usually When "variable" defined it will allocate a plass in memory / RAM and not on hard disk.
+
+- In C++ before you could use "register" keyword and allocate place in "register" which is faster 
+	due it's nearest to the CPU.
+	
+- From C++ and newer version it's not allowed any more, as it has flaw. 
+	(it used when the program require high speed).
+	
+- Types of Memory:
+-Hard disk (slowest)
+-RAM (faster)
+-Cache Memory (fatser)
+-Register(سجلً) (closest to cpu) (Fastest)
+
+- The reason is that dealing with it is very difficult & not easy.
+	because the CPU registers are the most expensive thing for the device in terms 
+	of speed, efficiency, etc...
+
+--------------------------------------------------------------------------------------------------
+---------------------------- Lesson #23 - Integer Format (printf) -----------------
+
+- "printf()" is formatting function, but with "cout << " you can't do that. 
+	(formated: the way you want them to be printed).
+	
+- In the example below will variable "Page" be substituted with "%d".
+
+- It's existed in most of programming languages, but diffrent syntax.
+ 
+int Page = 1, TotalPages = 10;
+
+ // print string and int variable    
+ printf("The page number = %d \n", Page);     
+ printf("You are in Page %d of %d \n", Page, TotalPages);
+ 
+ 
+ - "%0*d" Means put zeros in quantity of "2 means the total number / number width is 2 digits 
+	or any number you wish....etc 
+	printf("The page number =  %0*d \n", 2, Page);
+
+
+int Number1 = 20, Number2 = 30;     
+printf("The Result of %d + %d = %d \n", Number1, Number2,  Number1+ Number2);
+					   |	|    |
+					   |	|    |-----> Number1+ Number2
+				  Number1,Number2,  
+				  
+
+-------------------------------------------------------------------------------------
+----------------------------   Lesson #24 - Float Format (printf) -------
+
+- %.*f the star will fill the digits after the points. 
+
+
+// PI value would stay the same, but when you use precision with 2 ..3 .. etc 
+							the value changes only when you print it or show it on screen.
+
+float PI = 3.14159265;
+							
+- Here it rounded the 3rd digit after decimal point because of 4th digit is 5  
+	3.1415 > will print 3.142
+    printf("Precision Spesification of %.*f\n", 3, PI); //  Precision Spesification of 3.142
+
+- Here it rounded the 4th digit after decimal point because of 5th digit is higher than 5 which is (9) 
+	3.14159 > will print 3.1416
+	printf("Precision Spesification of %.*f\n", 4, PI); //  Precision Spesification of 3.1416
+	
+
+- In the code bellow %.3f means put .000 / 3 digits after the point > prints 7.000 
+float x = 7.0, y = 9.0;
+
+	// The float division is: 7.000 / 9.000 = 0.778
+    printf("\nThe float division is: %0.3f / %.3f = %.3f", x, y, x / y); 
+
+- Here will substitutes the missing digits after the point with zeros.
+    double d = 12.45;
+	printf("\n\nThe double value is: %0.3f", d); // The double value is: 12.450
+ 
+ 
+----------------------------------------------------------------------------------------------------
+---------------------- Lesson #25 - String and Char Format (printf) ---------------------
+
+- printf() or "C" language it doesn't take string data type, but it takes "array of char" 
+	> char Name[] = "James Bond";
+	> char SchoolName[] = "Programming Advices";
+
+- "String object" is not supported by printf().
+
+- "%s" is used to format array of character or string.
+// print string 
+    printf("Dear %s, How are you?\n\n", Name);
+
+// "%*c" prints character and "*" prints space.
+ 
+ char c = 'S';     
+    printf("Setting the width of c :%*c \n", 1, c);     	
+ 
+---------------------------------------------------------------------------------
+----------------------- Lesson #26 - Setw Manipulator -----------------
+
+- "setw" for set width manupilator, it's output manupilator.
+- Its in "iomanip" libraray. 
+
+- #include<iomanip>// this library stored the std::setw
+
+// Here is 5 spaces left from "right" to "left" from the "|" / the wall,
+	total width is "9" - "4" or "C101" = 5 spaces .
+- cout << setw(9) << "C101" << "|" .....; 
+
+
+//Here is "1" spaces to the left printed
+// total is "8" characters + "1" space from left(desired 	
+	spaces) when printed so you should put "total characters as setw "setw(9).
+	cout << setw(9) << "C1035243" << "|" ....; 
+
+- it's Put set() before the desired output text on screen.
+
+-------------------------------------------------------------------------------------
+--------------------- Lesson # 27 - Two Dimensional Arrays -----------
+
+- int arr[index - 1] = element value. ---> int arr[i-1][j-1]
+
+- Array is based "Zero" means 1st element's position is [0]...2nd [2]... [-1].
+
+- To get position of the element it's [row-1][column - 1].
+
+- We need 2 for loops to loop through the elements of "2 dimensional array" x[i][j].
+
+- There are many initialization ways, but this one is the best:-
+//int x[Rows][Cols];
+	int x[3][4] = { 
+					{1,2,3,4},                     
+		            {5,6,7,8},                     
+	            	{9,10,11,12}                    
+				  }; 
+ 
+
+
+ //int x[Rows][Cols];
+	int x[10][10]; 
+	
+	for (int i = 0; i < 10; i++)     
+	{ 
+		for (int j = 0; j < 10; j++)         
+		{ 
+			x[i][j] = (i + 1) * (j + 1);    //array is based 0 so we give i&j +1 as (i + 1) 
+		}     
+	}
+
+-----------------------------------------------------------------------------------------
+-------------   Lesson # 28 - Vectors Introduction , Declaration and Initialization -----
+
+- Allways when dealing with vector use "&" by reference it will be faster and makes the program 
+	faster.
+
+
+- Disadvantage of "array" that you have to declare / allocate place in memory for array before  
+		definition wich means alot of space in memory will not be used and it's a memory space loss.
+
+- Vector : is array but dynamic.
+
+- vector take same data type as array as int, float, ....etc.
+
+syntax
+-------------
+// std::vector<T> vector_name;
+
+//Always use v as prefix of variable so we know its vector.
+
+// There is also other ways to initiate vector values, but for now we take only this one.
+vector <int> vNumbers = { 10, 20, 30, 40, 50 };     
+
+cout << "Numbers Vector = "; 
+
+- Ranged loop go to the 1st element of vector and copy it exactly as it's.
+
+- Here will copy the element in vNumbers and put in Number and then allocate place named Number 
+		in memory and put the copied value from vNumbers/vector then take it from Number and use it. 
+
+- But this process copying is slow, because it take time and size from the memory, to solve this 	
+	problems we use "&" the adress, or it points to so we use "&Number" like so with "&". 	
+
+// ranged loop
+for (int  &Number : vNumbers) 
+{         
+cout << Number << "  ";     
+}     
+cout << endl; return 0; } 
+
+
+- printf("%4f \n", Number);
+	vector <double> vDouble = { 100.4, 2.6, 100.100, 66.6}; 
+	Here it will print sometimes 5 zeros some times 6 zeros after the float point to fix it
+	put "0.4f" 
+	> printf("%0.4f \n", Number);
+
+-------------------------------------------------------------------
+-------------------- Lesson # 29 - Add elements ------------
+
+- at the "run time" elements can be added or removed.
+
+- to add element vector uses "push_back()" that uses data structer stack.(LiFo)
+
+- "array" by default its paramter passed by ref, but "vector" you have to pass the parameter "by 
+    Ref"  !!!!
+	
+	vector <int> vNumbers;     
+	
+	vNumbers.push_back(10);     
+	vNumbers.push_back(20);     
+	vNumbers.push_back(30);     
+	vNumbers.push_back(40);     
+	vNumbers.push_back(50);     
+	
+	cout << "Numbers Vector: \n\n"; 
+	
+	// ranged loop
+	for (int & Number : vNumbers) 
+	{         
+		cout << Number << endl;     
+	}     
+
+- In the Home Work the program /(visual studio) would make a copy of vector vNumbers so
+	in the PrintVectorNumbers(vector <int> &vNumbers); "if we don't pass vector by &Ref"  it would be slower specially if the vector is heavy/ big. so it is always good practice to pass the vector by "Ref &".
+	
+- Best practice to pass vector by Ref "&" as we deal with memory addresses.
+
+---------------------------------------------------------------------------------------------
+---------------------- Lesson # 30 - Vector of Structure ---------------
+
+- Array is fixed size means you have to specify the size of it before you run the program.
+	but victor not, it specifys it's size dynamically.
+	
+- When dealing with vectors you have to pass it by Ref unlike array.
+	even when used in for ranged loops.
+	
+-----------------------------------------------------------------------
+-------------------- Lesson # 31 - Remove elements -----------
+
+- Push_back() adds element in to a vector stack. 
+
+- pop_back() removes element from a vector stack. (It removes last added element)
+
+- If the stack is empty and you pop_back() the compiler will gives you error because the vector 
+	stack is empty.
+
+- But you can check if the vector stack is empty or not then it will not give you error:
+
+    if (!vNumbers.empty())
+		vNumbers.pop_back();
+		
+    if (vNumbers.size() > 0)
+	     vNumbers.pop_back();
+		 
+
+- 	vNumbers.size();      // prints size of the vector stack (how many elements in the stack).
+
+- vNumbers.clear();      // clears the stack without looping through the elements.
+
+-----------------------------------------------------------------------------------------------
+------------------- Lesson #32 - Vector Functions ---------------------------------
+
+    cout << "First Element: " << vNumbers.front() << endl;
+	
+	cout << "Last Element: " << vNumbers.back() << endl;
+	
+	//returns the number of elements present in the vector
+	cout << "Size: " << vNumbers.size() << endl;
+	
+	//check the overall size of a vector
+	cout << "Capacity : " << vNumbers.capacity() << endl;
+	
+	//returns 1 (true) if the vector is empty
+	cout << "Empty : " << vNumbers.empty() << endl;
+	
+	

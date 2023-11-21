@@ -1,0 +1,153 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+//Problems #26 to #30 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+/*
+Problem #29 Print Sum Even Numbers from 1 to N
+
+Write a program to Sum even numbers from 1 to N. (Using While, do..while & For loop)
+Input
+10
+Outputs:
+30
+*/
+
+#include <iostream>
+
+using namespace std;
+
+enum enEvenOrOdd{All = 1, Even = 2, Odd = 3 };
+
+int ReadNumber()
+{
+    int N;
+    cout << "Please Enter the number\n";
+    cin >> N;
+    return N;
+}
+
+bool CheckOddOrEven(int Counter)
+{
+        return Counter % 2 == 0;
+}
+
+void PrintSumEvenNumbers1toNByWhile(int N)
+{
+    cout << "Using While loop : " << endl;
+
+    int Sum = 0;
+    int Counter = 0;
+
+    while (Counter <= N)
+    {
+        Counter++;
+        if(CheckOddOrEven(Counter))
+        Sum += Counter;
+       
+    }
+    cout << "The sum is : " << Sum << endl <<endl;
+}
+
+void PrintSumEvenNumbers1toNByDoWhile(int N)
+{
+    cout << "Using Do..While loop : " << endl;
+
+    int Sum = 0;
+    int Counter = 0;
+
+    do
+    {
+        Counter++;
+        if (CheckOddOrEven(Counter))
+        Sum += Counter;
+
+    } while (Counter <= N);
+    cout << "The sum is : " << Sum << endl << endl;
+}
+
+void PrintSumEvenNumbers1toNByFor(int N)
+{
+    cout << "Using For loop : " << endl;
+
+    int Sum = 0;
+    
+    for (int Counter = 0; Counter <= N; Counter++)
+    {
+        if (CheckOddOrEven(Counter))
+            Sum += Counter;
+    }
+    cout << "The sum is : " << Sum << endl << endl;
+}
+
+int main()
+{
+   
+    int x = ReadNumber();
+
+    PrintSumEvenNumbers1toNByWhile(x);
+    PrintSumEvenNumbers1toNByDoWhile(x);
+    PrintSumEvenNumbers1toNByFor(x);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

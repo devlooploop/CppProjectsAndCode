@@ -1,0 +1,18 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #08/2 Digit frequency 
+
+int CountDigitFrequency(short DigitToCheck, int Number) 
+{
+    int FreqCount = 0, Remainder = 0;
+    while (Number > 0) 
+    {
+        Remainder = Number % 10;
+        Number = Number / 10;
+        if (DigitToCheck == Remainder) 
+        {
+            FreqCount++;
+        }
+    }
+    
+    return FreqCount;
+}

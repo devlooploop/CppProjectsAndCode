@@ -1,0 +1,223 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #36 to #40 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+
+// Problem #40 Service Fee and Sales Tax
+
+/*
+A restaurant charges 10% services fee and 16% sales tax.
+Write a program to read a BillValue and add service fee and sales tax to it, and print the
+TotalBill on the screen.
+Input
+100
+Outputs:
+127.6
+*/
+
+#include <iostream>
+
+using namespace std;
+
+float ReadpositiveNumber(string Message)
+{
+    float BillValue = 0;
+    do
+    {
+        cout << Message << endl;
+        cin >> BillValue;
+    } while (BillValue <= 0);
+
+    return BillValue;
+}
+
+float CalculateTotalBill(float BillValue)
+{
+    float serviceFee = BillValue * 0.1;  // 10% service fee
+    float salesTax   = (BillValue + serviceFee) * 0.16;   // 16% sales tax
+ 
+    float TotalBill = BillValue + serviceFee + salesTax;
+
+    return TotalBill;
+
+}
+
+
+int main() {
+    
+    float x = ReadpositiveNumber("Ente the Bill Value");
+
+    
+    cout << "Total Bill: " << CalculateTotalBill(x) << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

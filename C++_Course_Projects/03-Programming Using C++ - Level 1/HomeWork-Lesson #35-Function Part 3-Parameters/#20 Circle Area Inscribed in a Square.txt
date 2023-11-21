@@ -1,0 +1,26 @@
+// Lesson #35 - Function Part 3 - Parameters
+// Problem-20-Circle_Inscribed_Square 
+
+#include <iostream>
+
+using namespace std;
+
+// Circle area inscribed in a square
+double CircleArea(double A) {
+
+	double PI = 3.14;
+
+	return (PI * A * A) / 4;
+}
+
+int main()
+{
+	double A;
+
+	cin >> A;
+
+	cout << "\n" << CircleArea(A);
+
+	return 0;
+
+}

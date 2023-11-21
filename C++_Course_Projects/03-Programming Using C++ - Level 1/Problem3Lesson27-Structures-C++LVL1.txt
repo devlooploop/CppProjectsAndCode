@@ -1,0 +1,72 @@
+// Problem3Lesson27-Structures
+//
+
+#include<iostream>
+
+using namespace std;
+
+
+
+struct ID {
+    string name;
+    int age;
+    char gender;
+    bool Married = true;
+
+};
+
+struct Address {
+    string City;
+    string country;
+};
+
+struct ContactInfo {
+    string phoneNumber;
+    string E_mail;
+    Address st_adress;
+    string socialMedia;
+};
+
+struct Income {
+    float MonthlySalary = 5000;
+    float YearlySalary = 60000;
+};
+
+struct Person {
+    ID st_ID;
+    ContactInfo st_ContactInfo;
+    Address st_address;
+    Income st_income;
+};
+
+int main()
+{
+
+    Person alisha, alikhan, Mari;
+
+    alisha.st_ID.name = "Alisha Malik";
+    alisha.st_address.City = "Roma";
+    alisha.st_address.country = "Italia";
+    alisha.st_ID.age = 55;
+    alisha.st_ID.gender = 'F';
+    //alisha.st_ID.Married = 1;
+    alisha.st_income.MonthlySalary = 5000;
+    alisha.st_income.YearlySalary = 60000;
+    alisha.st_ContactInfo.E_mail = "Myemail.gmail.com";
+    alisha.st_ContactInfo.phoneNumber = "1009238459";
+    alisha.st_ContactInfo.socialMedia = "Instagram";
+    
+    cout << "\n" << "*******************************************************************************************" << endl;
+
+    cout << "Name: " << alisha.st_ID.name << "\n" << "Age: " << alisha.st_ID.age << "\n" << "City: " << alisha.st_address.City << "\n"
+        << "Country: " << alisha.st_address.country << "\n" << "Monthly Salary: "
+        << alisha.st_income.MonthlySalary << "\n" << "Yearly Salary: " << alisha.st_income.YearlySalary
+        << "\n" << "Gender: " <<alisha.st_ID.gender <<"\n" << "Married: " << alisha.st_ID.Married << "\n" <<
+        "Phone Number: " << alisha.st_ContactInfo.phoneNumber << "\n" << "Contact Info: " << alisha.st_ContactInfo.socialMedia;
+
+    cout <<"\n" << "*******************************************************************************************" << endl;
+
+
+    return 0;
+
+}

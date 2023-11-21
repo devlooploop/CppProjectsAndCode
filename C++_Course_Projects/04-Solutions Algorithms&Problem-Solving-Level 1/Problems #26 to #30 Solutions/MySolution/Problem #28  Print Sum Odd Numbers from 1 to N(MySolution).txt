@@ -1,0 +1,149 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+//Problems #26 to #30 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #28 Sum odd numbers from 1 to N (Using While, Do..While, For)
+
+/*
+
+Write a program to Sum odd numbers from 1 to N.
+Input
+10
+
+Outputs:
+25
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int ReadNumber()
+{
+    int N;
+    cout << "Please Enter the number\n";
+    cin >> N;
+    return N;
+}
+
+void PrintSumOddNumbersFrom1ToNUsingWhile(int N)
+{
+    cout << "Using While\n";
+
+    int sum = 0;
+    int i = 1;
+    {
+        while (i <= N)
+        {
+            sum = sum + i;
+            i += 2;
+        }
+        cout << "*********\n";
+        cout << sum << "\n";
+    }
+}
+
+void PrintSumOddNumbersFrom1ToNUsingDoWhile(int N)
+{
+    cout << "Using Do...While\n";
+
+    int sum = 0;
+    int i = 1;
+
+    do
+    {
+      sum = sum + i;
+      i += 2;
+     
+    } while (i <= N);
+
+    cout << sum << "\n";
+    cout << "*********\n";
+}
+
+void PrintSumOddNumbersFrom1ToNUsingFor(int N)
+{
+    cout << "Using For\n";
+
+    int sum = 0;
+   
+    for(int i = 1; i <= N; i += 2)
+    {
+        sum = sum + i;
+    }
+    cout << sum << "\n";
+    cout << "*********\n";
+   
+}
+
+
+int main()
+{
+    int x = ReadNumber();
+   
+    PrintSumOddNumbersFrom1ToNUsingWhile(x);
+    PrintSumOddNumbersFrom1ToNUsingDoWhile(x);
+    PrintSumOddNumbersFrom1ToNUsingFor(x);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

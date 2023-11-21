@@ -1,0 +1,19 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #36/2 Add Array Element Simi Dynamic.
+
+
+void InputUserNumbersInArray(int arr[100], int &arrLength)
+{
+	bool AddMore = true;
+
+	do
+	{
+		
+		AddArrayElement(ReadNumber(), arr, arrLength);
+
+		cout << "\nDo you want to add more numbers ? [0]: No, [1]: Yes ?";
+		cin >> AddMore;
+
+	} while (AddMore);
+
+}

@@ -1,0 +1,8 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Project #1 (paper, Rock, Scissors)
+
+void ResetScreen()
+{
+	system("cls");
+	system("color 0F");
+}

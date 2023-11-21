@@ -1,0 +1,7 @@
+// Course 05 - Algorithms & Problem-Solving Level 2
+// Problem #35/2 Check Number in array.
+
+bool IsNumberInArray(int Number, int arr[100], int arrLength)
+{
+    return FindNumberPositionInArray(Number, arr, arrLength) != -1;
+}

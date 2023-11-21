@@ -1,0 +1,181 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #36 to #40 Solutions
+
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #38 Is Prime Number
+
+/*
+
+Write a program to read a number and check if it is a prime number or not.
+Note: Prime number can only divide on one and on itself.
+Input
+5
+6
+3
+Outputs:
+Prime
+Not Prime
+Prime
+
+*/
+
+#include <iostream>
+using namespace std;
+
+bool isPrime(int num) {
+	if (num <= 1) {
+		return false;
+	}
+	for (int i = 2; i * i <= num; i++) {
+		if (num % i == 0) {
+			return false;
+		}
+	}
+	return true;
+}
+
+int main() {
+	int num;
+	cout << "Enter a number: ";
+	cin >> num;
+
+	if (isPrime(num)) {
+		cout << num << " is a prime number." << endl;
+	}
+	else {
+		cout << num << " is not a prime number." << endl;
+	}
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

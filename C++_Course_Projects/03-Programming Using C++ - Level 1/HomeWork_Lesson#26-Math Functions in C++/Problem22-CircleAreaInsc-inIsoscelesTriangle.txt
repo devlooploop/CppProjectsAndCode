@@ -1,0 +1,24 @@
+//Problem 22 Circle Area Inscribed in an Isosceles Triangle
+//Lesson #26 - Math Functions in C++
+// after finding the result use floor and print the final result
+
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    float a, b, Area, PI = 3.14159;
+
+    cout << "Enter The Value:\n";
+    cin >> a;
+    cin >> b;
+
+    Area =  PI * (pow(b,2)/4) * ((2 * a-b)/(2 * a+b));
+
+    cout << floor(Area)<< "\n";
+
+    return 0;
+}
+

@@ -1,0 +1,24 @@
+//Problem 20 Circle Area Inscribed in a Square
+//Math Functions C++
+// after finding the result use ceil and print the final result.
+
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    float A, Area, PI = 3.14159;
+
+    cout << "Enter The Value:\n";
+    cin >> A;
+
+    //Area =  PI * pow((A/2),2);
+    Area =  (PI * pow(A,2))/4;
+
+    cout << ceil(Area)<< "\n";
+
+    return 0;
+}
+

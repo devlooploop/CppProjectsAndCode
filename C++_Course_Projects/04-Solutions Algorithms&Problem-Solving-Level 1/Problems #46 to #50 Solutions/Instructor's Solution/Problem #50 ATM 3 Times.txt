@@ -1,0 +1,321 @@
+// Course - 04 - Solutions - Algorithms&Problem-Solving-Level 1 
+// Problems #46 to #50 Solutions
+// 
+// Use Procedures, Functions & structures (enum, struct ) in all solutions
+// From Algorthim and Problem Solving 
+
+// Problem #50 ATM PIN 3 Times
+
+/* Write a program to read the ATM PIN code from the user, then check if PIN Code = 1234, 
+then show the balanceto user, otherwise print “Wrong PIN” and ask the user to enter the PIN again.
+Only allow user to enter the PIN 3 times, if fails, print “Card is locked!”
+Assume User Balance is 7500.
+Input
+1234
+
+5151
+Outputs:
+Your Balance is: 7500
+Wrong PIN
+    */
+
+#include <iostream>
+
+using namespace std;
+
+string ReadPINCode()
+{
+    string PinCode;
+    cout << "Please enter PIN code \n";
+    cin >> PinCode;
+
+    return PinCode;
+}
+
+bool Login()
+{
+    string PinCode;
+    int Counter = 3;
+
+    do 
+    {
+        Counter--;
+        PinCode = ReadPINCode();
+
+        if (PinCode == "1234")
+        {
+            return 1; //this will exit the function and return true
+        }
+        else
+        {
+            system("color 4F"); //turn screen to Red
+            cout << "\nWrong PIN, you have" << Counter<< " more tries" << endl;
+        }
+
+    } while (Counter >= 1 && PinCode != "1234");
+   
+    return 0; //when you reach here this means login faild
+}
+
+int main()
+{
+    if (Login())
+    {
+        system("color 2F"); // turn screen to green
+        cout << "\nYour account balance is " << 7500 << '\n';
+    }
+    else
+    {
+        cout << "\nYour card blocked call the bank for help. \n";
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
